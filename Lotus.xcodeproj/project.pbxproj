@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE8F24146B0E008641AD /* AppDelegate.swift */; };
+		FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE9124146B0E008641AD /* SceneDelegate.swift */; };
+		FA25DE9424146B0E008641AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE9324146B0E008641AD /* ContentView.swift */; };
+		FA25DE9624146B10008641AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9524146B10008641AD /* Assets.xcassets */; };
+		FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9824146B10008641AD /* Preview Assets.xcassets */; };
+		FA25DE9C24146B10008641AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */; };
+		FA25DEA724146B10008641AD /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEA624146B10008641AD /* LotusTests.swift */; };
+		FA25DEB224146B10008641AD /* LotusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEB124146B10008641AD /* LotusUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA25DEA324146B10008641AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA25DE8424146B0E008641AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA25DE8B24146B0E008641AD;
+			remoteInfo = Lotus;
+		};
+		FA25DEAE24146B10008641AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA25DE8424146B0E008641AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA25DE8B24146B0E008641AD;
+			remoteInfo = Lotus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA25DE8C24146B0E008641AD /* Lotus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA25DE8F24146B0E008641AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA25DE9124146B0E008641AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA25DE9324146B0E008641AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA25DE9524146B10008641AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA25DE9824146B10008641AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA25DE9B24146B10008641AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA25DE9D24146B10008641AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA25DEA224146B10008641AD /* LotusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA25DEA624146B10008641AD /* LotusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusTests.swift; sourceTree = "<group>"; };
+		FA25DEA824146B10008641AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA25DEAD24146B10008641AD /* LotusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA25DEB124146B10008641AD /* LotusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusUITests.swift; sourceTree = "<group>"; };
+		FA25DEB324146B10008641AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA25DE8924146B0E008641AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DE9F24146B10008641AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DEAA24146B10008641AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA25DE8324146B0E008641AD = {
+			isa = PBXGroup;
+			children = (
+				FA25DE8E24146B0E008641AD /* Lotus */,
+				FA25DEA524146B10008641AD /* LotusTests */,
+				FA25DEB024146B10008641AD /* LotusUITests */,
+				FA25DE8D24146B0E008641AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA25DE8D24146B0E008641AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DE8C24146B0E008641AD /* Lotus.app */,
+				FA25DEA224146B10008641AD /* LotusTests.xctest */,
+				FA25DEAD24146B10008641AD /* LotusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA25DE8E24146B0E008641AD /* Lotus */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DE8F24146B0E008641AD /* AppDelegate.swift */,
+				FA25DE9124146B0E008641AD /* SceneDelegate.swift */,
+				FA25DE9324146B0E008641AD /* ContentView.swift */,
+				FA25DE9524146B10008641AD /* Assets.xcassets */,
+				FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */,
+				FA25DE9D24146B10008641AD /* Info.plist */,
+				FA25DE9724146B10008641AD /* Preview Content */,
+			);
+			path = Lotus;
+			sourceTree = "<group>";
+		};
+		FA25DE9724146B10008641AD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DE9824146B10008641AD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA25DEA524146B10008641AD /* LotusTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DEA624146B10008641AD /* LotusTests.swift */,
+				FA25DEA824146B10008641AD /* Info.plist */,
+			);
+			path = LotusTests;
+			sourceTree = "<group>";
+		};
+		FA25DEB024146B10008641AD /* LotusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DEB124146B10008641AD /* LotusUITests.swift */,
+				FA25DEB324146B10008641AD /* Info.plist */,
+			);
+			path = LotusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA25DE8B24146B0E008641AD /* Lotus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA25DEB624146B10008641AD /* Build configuration list for PBXNativeTarget "Lotus" */;
+			buildPhases = (
+				FA25DE8824146B0E008641AD /* Sources */,
+				FA25DE8924146B0E008641AD /* Frameworks */,
+				FA25DE8A24146B0E008641AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lotus;
+			productName = Lotus;
+			productReference = FA25DE8C24146B0E008641AD /* Lotus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA25DEA124146B10008641AD /* LotusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA25DEB924146B10008641AD /* Build configuration list for PBXNativeTarget "LotusTests" */;
+			buildPhases = (
+				FA25DE9E24146B10008641AD /* Sources */,
+				FA25DE9F24146B10008641AD /* Frameworks */,
+				FA25DEA024146B10008641AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA25DEA424146B10008641AD /* PBXTargetDependency */,
+			);
+			name = LotusTests;
+			productName = LotusTests;
+			productReference = FA25DEA224146B10008641AD /* LotusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA25DEAC24146B10008641AD /* LotusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA25DEBC24146B10008641AD /* Build configuration list for PBXNativeTarget "LotusUITests" */;
+			buildPhases = (
+				FA25DEA924146B10008641AD /* Sources */,
+				FA25DEAA24146B10008641AD /* Frameworks */,
+				FA25DEAB24146B10008641AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA25DEAF24146B10008641AD /* PBXTargetDependency */,
+			);
+			name = LotusUITests;
+			productName = LotusUITests;
+			productReference = FA25DEAD24146B10008641AD /* LotusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA25DE8424146B0E008641AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alex Young";
+				TargetAttributes = {
+					FA25DE8B24146B0E008641AD = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FA25DEA124146B10008641AD = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FA25DE8B24146B0E008641AD;
+					};
+					FA25DEAC24146B10008641AD = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FA25DE8B24146B0E008641AD;
+					};
+				};
+			};
+			buildConfigurationList = FA25DE8724146B0E008641AD /* Build configuration list for PBXProject "Lotus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA25DE8324146B0E008641AD;
+			productRefGroup = FA25DE8D24146B0E008641AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA25DE8B24146B0E008641AD /* Lotus */,
+				FA25DEA124146B10008641AD /* LotusTests */,
+				FA25DEAC24146B10008641AD /* LotusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA25DE8A24146B0E008641AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA25DE9C24146B10008641AD /* LaunchScreen.storyboard in Resources */,
+				FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */,
+				FA25DE9624146B10008641AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DEA024146B10008641AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DEAB24146B10008641AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA25DE8824146B0E008641AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */,
+				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
+				FA25DE9424146B0E008641AD /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DE9E24146B10008641AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA25DEA724146B10008641AD /* LotusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA25DEA924146B10008641AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA25DEB224146B10008641AD /* LotusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA25DEA424146B10008641AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA25DE8B24146B0E008641AD /* Lotus */;
+			targetProxy = FA25DEA324146B10008641AD /* PBXContainerItemProxy */;
+		};
+		FA25DEAF24146B10008641AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA25DE8B24146B0E008641AD /* Lotus */;
+			targetProxy = FA25DEAE24146B10008641AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA25DE9B24146B10008641AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA25DEB424146B10008641AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA25DEB524146B10008641AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA25DEB724146B10008641AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Lotus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.Lotus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA25DEB824146B10008641AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Lotus/Preview Content\"";
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Lotus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.Lotus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA25DEBA24146B10008641AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				INFOPLIST_FILE = LotusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.LotusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotus.app/Lotus";
+			};
+			name = Debug;
+		};
+		FA25DEBB24146B10008641AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				INFOPLIST_FILE = LotusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.LotusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lotus.app/Lotus";
+			};
+			name = Release;
+		};
+		FA25DEBD24146B10008641AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				INFOPLIST_FILE = LotusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.LotusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lotus;
+			};
+			name = Debug;
+		};
+		FA25DEBE24146B10008641AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML4K9AC7JP;
+				INFOPLIST_FILE = LotusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.LotusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lotus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA25DE8724146B0E008641AD /* Build configuration list for PBXProject "Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA25DEB424146B10008641AD /* Debug */,
+				FA25DEB524146B10008641AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA25DEB624146B10008641AD /* Build configuration list for PBXNativeTarget "Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA25DEB724146B10008641AD /* Debug */,
+				FA25DEB824146B10008641AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA25DEB924146B10008641AD /* Build configuration list for PBXNativeTarget "LotusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA25DEBA24146B10008641AD /* Debug */,
+				FA25DEBB24146B10008641AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA25DEBC24146B10008641AD /* Build configuration list for PBXNativeTarget "LotusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA25DEBD24146B10008641AD /* Debug */,
+				FA25DEBE24146B10008641AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA25DE8424146B0E008641AD /* Project object */;
+}
