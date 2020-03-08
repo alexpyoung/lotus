@@ -1,0 +1,14 @@
+{
+  "name": "Lotus",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Alex Young <alexyoung1992@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "apollo": "^2.25.0"
+  },
+  "scripts": {
+    "download_gql_schema": "apollo schema:download --endpoint https://lotus-training.herokuapp.com/v1/graphql && mv schema.json Lotus/GraphQL/",
+    "codegen_gql": "apollo codegen:generate --target=swift --includes=./**/*.gql --localSchemaFile=Lotus/GraphQL/schema.json Lotus/GraphQL/API.swift"
+  }
+}

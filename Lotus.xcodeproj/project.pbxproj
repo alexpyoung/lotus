@@ -18,6 +18,10 @@
 		FA25DE9C24146B10008641AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */; };
 		FA25DEA724146B10008641AD /* LotusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEA624146B10008641AD /* LotusTests.swift */; };
 		FA25DEB224146B10008641AD /* LotusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEB124146B10008641AD /* LotusUITests.swift */; };
+		FA25DECC24146E8B008641AD /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = FA25DECB24146E8B008641AD /* schema.json */; };
+		FA25DECF24146F5D008641AD /* Mutations.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DECE24146F5D008641AD /* Mutations.gql */; };
+		FA25DED2241470B4008641AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DED1241470B4008641AD /* API.swift */; };
+		FA25DED824147391008641AD /* Queries.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED724147391008641AD /* Queries.gql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		FA25DEAD24146B10008641AD /* LotusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LotusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA25DEB124146B10008641AD /* LotusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotusUITests.swift; sourceTree = "<group>"; };
 		FA25DEB324146B10008641AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA25DECB24146E8B008641AD /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		FA25DECE24146F5D008641AD /* Mutations.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutations.gql; sourceTree = "<group>"; };
+		FA25DED1241470B4008641AD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FA25DED724147391008641AD /* Queries.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.gql; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +147,7 @@
 		FA25DE8E24146B0E008641AD /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				FA25DECD24146EAF008641AD /* GraphQL */,
 				FA25DE8F24146B0E008641AD /* AppDelegate.swift */,
 				FA25DE9124146B0E008641AD /* SceneDelegate.swift */,
 				FA25DE9324146B0E008641AD /* ContentView.swift */,
@@ -176,6 +185,17 @@
 			path = LotusUITests;
 			sourceTree = "<group>";
 		};
+		FA25DECD24146EAF008641AD /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DECB24146E8B008641AD /* schema.json */,
+				FA25DED724147391008641AD /* Queries.gql */,
+				FA25DECE24146F5D008641AD /* Mutations.gql */,
+				FA25DED1241470B4008641AD /* API.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,6 +204,7 @@
 			buildConfigurationList = FA25DEB624146B10008641AD /* Build configuration list for PBXNativeTarget "Lotus" */;
 			buildPhases = (
 				981D91C3B7492F92D44F2C80 /* [CP] Check Pods Manifest.lock */,
+				FA25DED024146FD2008641AD /* Apollo Codegen */,
 				FA25DE8824146B0E008641AD /* Sources */,
 				FA25DE8924146B0E008641AD /* Frameworks */,
 				FA25DE8A24146B0E008641AD /* Resources */,
@@ -285,8 +306,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA25DECC24146E8B008641AD /* schema.json in Resources */,
 				FA25DE9C24146B10008641AD /* LaunchScreen.storyboard in Resources */,
+				FA25DECF24146F5D008641AD /* Mutations.gql in Resources */,
 				FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */,
+				FA25DED824147391008641AD /* Queries.gql in Resources */,
 				FA25DE9624146B10008641AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +432,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lotus-LotusUITests/Pods-Lotus-LotusUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA25DED024146FD2008641AD /* Apollo Codegen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo Codegen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "yarn run download_gql_schema\nyarn run codegen_gql\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -418,6 +460,7 @@
 				FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */,
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DE9424146B0E008641AD /* ContentView.swift in Sources */,
+				FA25DED2241470B4008641AD /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
