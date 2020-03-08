@@ -21,6 +21,8 @@
 		FA25DECC24146E8B008641AD /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = FA25DECB24146E8B008641AD /* schema.json */; };
 		FA25DECF24146F5D008641AD /* Mutations.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DECE24146F5D008641AD /* Mutations.gql */; };
 		FA25DED2241470B4008641AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DED1241470B4008641AD /* API.swift */; };
+		FA25DED42414715A008641AD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DED32414715A008641AD /* Network.swift */; };
+		FA25DED62414720C008641AD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED52414720C008641AD /* Config.plist */; };
 		FA25DED824147391008641AD /* Queries.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED724147391008641AD /* Queries.gql */; };
 		FA25DEDA2414817E008641AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED92414817E008641AD /* Auth0.plist */; };
 		FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEDD24148A7C008641AD /* Authentication.swift */; };
@@ -69,6 +71,8 @@
 		FA25DECB24146E8B008641AD /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		FA25DECE24146F5D008641AD /* Mutations.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutations.gql; sourceTree = "<group>"; };
 		FA25DED1241470B4008641AD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FA25DED32414715A008641AD /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FA25DED52414720C008641AD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		FA25DED724147391008641AD /* Queries.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.gql; sourceTree = "<group>"; };
 		FA25DED92414817E008641AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		FA25DEDD24148A7C008641AD /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				FA25DED724147391008641AD /* Queries.gql */,
 				FA25DECE24146F5D008641AD /* Mutations.gql */,
 				FA25DED1241470B4008641AD /* API.swift */,
+				FA25DED32414715A008641AD /* Network.swift */,
+				FA25DED52414720C008641AD /* Config.plist */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				FA25DECF24146F5D008641AD /* Mutations.gql in Resources */,
 				FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */,
 				FA25DED824147391008641AD /* Queries.gql in Resources */,
+				FA25DED62414720C008641AD /* Config.plist in Resources */,
 				FA25DE9624146B10008641AD /* Assets.xcassets in Resources */,
 				FA25DEDA2414817E008641AD /* Auth0.plist in Resources */,
 			);
@@ -495,6 +502,7 @@
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DE9424146B0E008641AD /* ContentView.swift in Sources */,
 				FA25DED2241470B4008641AD /* API.swift in Sources */,
+				FA25DED42414715A008641AD /* Network.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
