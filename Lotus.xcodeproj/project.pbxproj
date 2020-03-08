@@ -13,6 +13,7 @@
 		FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE8F24146B0E008641AD /* AppDelegate.swift */; };
 		FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE9124146B0E008641AD /* SceneDelegate.swift */; };
 		FA25DE9424146B0E008641AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE9324146B0E008641AD /* ContentView.swift */; };
+		FA25DE9424146B0E008641AD /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DE9324146B0E008641AD /* AuthenticationView.swift */; };
 		FA25DE9624146B10008641AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9524146B10008641AD /* Assets.xcassets */; };
 		FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9824146B10008641AD /* Preview Assets.xcassets */; };
 		FA25DE9C24146B10008641AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */; };
@@ -61,6 +62,7 @@
 		FA25DE8F24146B0E008641AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA25DE9124146B0E008641AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA25DE9324146B0E008641AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA25DE9324146B0E008641AD /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FA25DE9524146B10008641AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA25DE9824146B10008641AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA25DE9B24146B10008641AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		FA25DEDF24152524008641AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FA25DE9324146B0E008641AD /* AuthenticationView.swift */,
 				FA25DEE02415252D008641AD /* Library */,
 			);
 			path = UI;
@@ -531,6 +534,7 @@
 				FA25DED42414715A008641AD /* Network.swift in Sources */,
 				FA25DEE224152556008641AD /* RoundedButton.swift in Sources */,
 				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
+				FA25DE9424146B0E008641AD /* AuthenticationView.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
