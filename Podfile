@@ -6,6 +6,8 @@ plugin 'cocoapods-binary'
 target 'Lotus' do
   use_frameworks!
 
+  pod 'Apollo', '~> 0.23', :binary => true
+
   target 'LotusTests' do
     inherit! :search_paths
   end

@@ -1,0 +1,2 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework
+${DWARF_DSYM_FOLDER_PATH}/Apollo.framework.dSYM
