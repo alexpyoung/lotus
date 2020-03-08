@@ -1,6 +1,14 @@
-query Sessions {
-  sessions {
-    jwt
-    auth0_id
+query MyActivityPlans($auth0id: String!) {
+  users(where: {auth0_id: {_eq: $auth0id}}) {
+    person {
+      groups {
+        activity_plans {
+          plan {
+            id
+            name
+          }
+        }
+      }
+    }
   }
 }

@@ -1,1 +1,12 @@
-
+mutation SignUp($auth0id: String!, $name: String!) {
+  insert_users(objects: {auth0_id: $auth0id, person: {data: {name: $name, groups: {data: {}}}}}) {
+    returning {
+      person {
+        id
+        groups {
+          id
+        }
+      }
+    }
+  }
+}
