@@ -1,0 +1,6 @@
+excluded:
+  - Pods
+  - Lotus/GraphQL/API.swift
+
+disabled_rules:
+  - trailing_comma

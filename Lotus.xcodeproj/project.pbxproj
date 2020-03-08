@@ -205,6 +205,7 @@
 			buildPhases = (
 				981D91C3B7492F92D44F2C80 /* [CP] Check Pods Manifest.lock */,
 				FA25DED024146FD2008641AD /* Apollo Codegen */,
+				FA25DEF3241540DF008641AD /* SwiftLint */,
 				FA25DE8824146B0E008641AD /* Sources */,
 				FA25DE8924146B0E008641AD /* Frameworks */,
 				FA25DE8A24146B0E008641AD /* Resources */,
@@ -449,6 +450,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "yarn run download_gql_schema\nyarn run codegen_gql\n";
+		};
+		FA25DEF3241540DF008641AD /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --strict\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
