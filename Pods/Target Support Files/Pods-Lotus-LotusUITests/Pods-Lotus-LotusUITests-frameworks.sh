@@ -214,10 +214,22 @@ fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/Apollo/Apollo.framework"
   install_dsym "${PODS_ROOT}/Apollo/Apollo.framework.dSYM"
+  install_framework "${PODS_ROOT}/Auth0/Auth0.framework"
+  install_dsym "${PODS_ROOT}/Auth0/Auth0.framework.dSYM"
+  install_framework "${PODS_ROOT}/JWTDecode/JWTDecode.framework"
+  install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
+  install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
+  install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/Apollo/Apollo.framework"
   install_dsym "${PODS_ROOT}/Apollo/Apollo.framework.dSYM"
+  install_framework "${PODS_ROOT}/Auth0/Auth0.framework"
+  install_dsym "${PODS_ROOT}/Auth0/Auth0.framework.dSYM"
+  install_framework "${PODS_ROOT}/JWTDecode/JWTDecode.framework"
+  install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
+  install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
+  install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		192AEFA366AAFE1F45B918C022FE489C /* SimpleKeychain */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 820AD6D3178F54233E3D1EB4CC447023 /* Build configuration list for PBXAggregateTarget "SimpleKeychain" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SimpleKeychain;
+		};
+		22E1F0E7CBECE226FC294E79C21B0033 /* JWTDecode */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DE4D929679ABB62BF313A1FC6B6587DC /* Build configuration list for PBXAggregateTarget "JWTDecode" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = JWTDecode;
+		};
 		30EE3CABB612307A688C40B61BFA74CC /* Apollo */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = A439F55036667D922C83064A0C686A69 /* Build configuration list for PBXAggregateTarget "Apollo" */;
@@ -25,48 +43,108 @@
 			);
 			name = SwiftLint;
 		};
+		D6A440A37D50015E369921294617C612 /* Auth0 */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F4D6DC828C5E88F19EEB9B193B67BED3 /* Build configuration list for PBXAggregateTarget "Auth0" */;
+			buildPhases = (
+			);
+			dependencies = (
+				46D091B150E8815ABF7CCC31B241D6C9 /* PBXTargetDependency */,
+				5E2290C2057785A9EEE986532E100006 /* PBXTargetDependency */,
+			);
+			name = Auth0;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		12CFEAA5D9B334D888936F97F70FAC24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1F960348EF280C0022A79502131BDD70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		3A329A041AAC12771EFECEF9351BE723 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		911396155BB75C4778E95D532658818E /* Pods-Lotus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D16A22883662F81B4CD836C336162C /* Pods-Lotus-dummy.m */; };
-		971F05ED9F9BD4CD8367F141100DA62E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		9F258AC41588499775376937F9CC9AF0 /* Pods-Lotus-LotusUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6633A478A398533ED0CFE5519B57151 /* Pods-Lotus-LotusUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A12BAA0A33A264B231948A8873EF573E /* Pods-Lotus-LotusUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DEB379BC85AA336F86B7941B6311CB /* Pods-Lotus-LotusUITests-dummy.m */; };
+		42DAA32EF0B28D428BF9CF2EC6135E6A /* Pods-Lotus-LotusUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DEB379BC85AA336F86B7941B6311CB /* Pods-Lotus-LotusUITests-dummy.m */; };
+		541C4FB3B2E6865F606F201B9F657BBD /* Pods-Lotus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DE6C72553D25F335166389ED1D8E0A0 /* Pods-Lotus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		674B32FA513CC27D414E29D6F4B7559B /* Pods-Lotus-LotusUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6633A478A398533ED0CFE5519B57151 /* Pods-Lotus-LotusUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F2C210C89D7965A008CD1CBB5629E05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9F5B05C47B442B6AF60361514DE8FCAC /* Pods-Lotus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D16A22883662F81B4CD836C336162C /* Pods-Lotus-dummy.m */; };
 		C67F0C55AA3240EC89B1CE9AED6B655B /* Pods-LotusTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 562AF11B146638D96FD956BDCB0FFE52 /* Pods-LotusTests-dummy.m */; };
 		DED1A8214D69BDCE115E34C730F945BB /* Pods-LotusTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D90ACB72C67756C5213E2C10B28EF18A /* Pods-LotusTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEA725D5DB1AC849E89A4632DAD07AD5 /* Pods-Lotus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DE6C72553D25F335166389ED1D8E0A0 /* Pods-Lotus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A3204E2DD115E2D0C9DDEFDA6A7CB07 /* PBXContainerItemProxy */ = {
+		2399A29B6E2907E481DE46DC4CDD9320 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
-			remoteInfo = SwiftLint;
+			remoteGlobalIDString = 192AEFA366AAFE1F45B918C022FE489C;
+			remoteInfo = SimpleKeychain;
 		};
-		61CEB48D768D45838DE5A9CD5E377946 /* PBXContainerItemProxy */ = {
+		283658AF10F2CE810CF180E455262248 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 30EE3CABB612307A688C40B61BFA74CC;
 			remoteInfo = Apollo;
 		};
-		A4AD84657A6D25ADB82A9C0969AECA5A /* PBXContainerItemProxy */ = {
+		29BB61B8FD6A622AE6D516B72B81B86D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30EE3CABB612307A688C40B61BFA74CC;
+			remoteInfo = Apollo;
+		};
+		346D0783BE405F688C1D2C75535B0D35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192AEFA366AAFE1F45B918C022FE489C;
+			remoteInfo = SimpleKeychain;
+		};
+		3E00FD5BF000B150DD1627948B31CF13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E1F0E7CBECE226FC294E79C21B0033;
+			remoteInfo = JWTDecode;
+		};
+		8B65869F032295CAEA5FC8FFAF924F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6A440A37D50015E369921294617C612;
+			remoteInfo = Auth0;
+		};
+		9D80FA751CF0CC47F9785327B502CCBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E1F0E7CBECE226FC294E79C21B0033;
+			remoteInfo = JWTDecode;
+		};
+		B49408F9956FD145040F2213819F99C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
 			remoteInfo = SwiftLint;
 		};
-		B6D2A9BCAE5E573F163AC3A84F96F0B1 /* PBXContainerItemProxy */ = {
+		C68219CC77336F54F24BF61E276B2BA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 30EE3CABB612307A688C40B61BFA74CC;
-			remoteInfo = Apollo;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		CF083E6F1CA1815B9AFA0C26E1326B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22E1F0E7CBECE226FC294E79C21B0033;
+			remoteInfo = JWTDecode;
+		};
+		E78670FE40C54B9E03F70D8BE25EFB69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 192AEFA366AAFE1F45B918C022FE489C;
+			remoteInfo = SimpleKeychain;
 		};
 		EB06C617F43276487AFA696E6CC932A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -75,61 +153,77 @@
 			remoteGlobalIDString = 696698721AD7C457847612B4D0ED83E8;
 			remoteInfo = "Pods-Lotus";
 		};
+		FEAEC7974FEBE5DFBC56F4397A3EC8D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6A440A37D50015E369921294617C612;
+			remoteInfo = Auth0;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0BD5EBFFAF84E0CFFAC85F113C4D4997 /* Pods-Lotus-LotusUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Lotus-LotusUITests.modulemap"; sourceTree = "<group>"; };
 		0FBB088E1B9EE714AF74B5DCB8658010 /* Pods-Lotus-LotusUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lotus-LotusUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		129447C0B3267DF8DB0A149F4638599A /* Pods-Lotus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus.release.xcconfig"; sourceTree = "<group>"; };
+		16732E8D6230F1906DD9178ACC953E6E /* Apollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.release.xcconfig; sourceTree = "<group>"; };
+		1E324DBF7849B90DD3F3BD4417680BD8 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		349A202B1B3CFA8BD8E1DA931C7BB0BB /* Pods-Lotus-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus-acknowledgements.plist"; sourceTree = "<group>"; };
 		35D16A22883662F81B4CD836C336162C /* Pods-Lotus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lotus-dummy.m"; sourceTree = "<group>"; };
 		3B1BF64EA71362C1A3107C0B7733CAC0 /* Pods-Lotus-LotusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus-LotusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3CC623EF2335B55045B68EEECA014FAB /* Pods-Lotus-LotusUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus-LotusUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		52DEB379BC85AA336F86B7941B6311CB /* Pods-Lotus-LotusUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Lotus-LotusUITests-dummy.m"; sourceTree = "<group>"; };
+		5332C6C239479586D4312B0160E79571 /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = ../_Prebuild/GeneratedFrameworks/SimpleKeychain/SimpleKeychain.framework; sourceTree = "<group>"; };
 		547BDDDE30527ED5CEFDDE3514C83176 /* Pods-LotusTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LotusTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		556B9B06057CFD188C929DE6910E5B09 /* Pods-LotusTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LotusTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		562AF11B146638D96FD956BDCB0FFE52 /* Pods-LotusTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LotusTests-dummy.m"; sourceTree = "<group>"; };
+		669FF02F5A178BAEFB184CC4C2348067 /* JWTDecode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWTDecode.debug.xcconfig; sourceTree = "<group>"; };
 		6DE6C72553D25F335166389ED1D8E0A0 /* Pods-Lotus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lotus-umbrella.h"; sourceTree = "<group>"; };
 		6E0F8C6A26B13B43A2203A73F86716F4 /* Pods-LotusTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LotusTests-Info.plist"; sourceTree = "<group>"; };
-		7B2FB1ED9E7077F260E71DEF2E66B67C /* Apollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.debug.xcconfig; sourceTree = "<group>"; };
 		7F4A07DB99153E7688FED890671A0361 /* Pods-LotusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LotusTests.release.xcconfig"; sourceTree = "<group>"; };
-		832187E928118A3F2E4EFFF96B5BBDA3 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		834194233657DBEDC7B046786832D3C5 /* JWTDecode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JWTDecode.release.xcconfig; sourceTree = "<group>"; };
 		840778DCED9A8D7C73BAA044C3724849 /* Pods-LotusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LotusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87733C3E7FA3AABB3898BEDE303A7D5D /* Pods-Lotus-LotusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus-LotusUITests.release.xcconfig"; sourceTree = "<group>"; };
-		8832775CC7C8FBE8ED146D05EBD696C1 /* Apollo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.release.xcconfig; sourceTree = "<group>"; };
 		8A1827BEC8AEDBDA2C1F83C55BD2411F /* Pods_LotusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LotusTests.framework; path = "Pods-LotusTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C885933AFB915EDD7D70592759BDE7E /* Pods-Lotus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus-Info.plist"; sourceTree = "<group>"; };
+		8DE30EB3A8930D729AD9BF55FE77E428 /* Auth0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Auth0.release.xcconfig; sourceTree = "<group>"; };
 		8ED428A0EF859A566962CB5FE07467D3 /* Pods-Lotus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Lotus.modulemap"; sourceTree = "<group>"; };
 		8FEE293E8AD65BD113E1E5E2025F3F06 /* Pods-LotusTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LotusTests.modulemap"; sourceTree = "<group>"; };
+		974BDB5032419C171977C880944A2B91 /* JWTDecode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JWTDecode.framework; path = ../_Prebuild/GeneratedFrameworks/JWTDecode/JWTDecode.framework; sourceTree = "<group>"; };
+		97B937488E77927BA95EE5B6F77BFC3E /* SimpleKeychain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleKeychain.debug.xcconfig; sourceTree = "<group>"; };
+		9BB7139EBF613EAAD2FFCE8D03AAA261 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E03A9D3DDBF1DB8B1630E2732E2A2D2 /* Pods-Lotus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Lotus-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A28783D27742F02112A0F7DD304D010E /* Apollo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Apollo.debug.xcconfig; sourceTree = "<group>"; };
 		A6633A478A398533ED0CFE5519B57151 /* Pods-Lotus-LotusUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Lotus-LotusUITests-umbrella.h"; sourceTree = "<group>"; };
 		AFFB93F85F04CB96233EDC7A3A5D7574 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lotus.framework; path = "Pods-Lotus.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57497C24FB7D02A76F866E98CEE49EE /* SimpleKeychain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleKeychain.release.xcconfig; sourceTree = "<group>"; };
 		C23001BF75E9887C2F2FF123EAFEF74B /* Pods-Lotus-LotusUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus-LotusUITests-frameworks.sh"; sourceTree = "<group>"; };
 		C5E26E6C2772D74975646841B12DADFA /* Pods_Lotus_LotusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Lotus_LotusUITests.framework; path = "Pods-Lotus-LotusUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C740B56424A4C23FB657D80F92628840 /* Pods-Lotus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Lotus-frameworks.sh"; sourceTree = "<group>"; };
-		D84832D92B86CEB7EC274FAB5389C737 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		D89B82673AEE7A39BEFE0922DEFECEDF /* Pods-Lotus-LotusUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Lotus-LotusUITests-Info.plist"; sourceTree = "<group>"; };
 		D90ACB72C67756C5213E2C10B28EF18A /* Pods-LotusTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LotusTests-umbrella.h"; sourceTree = "<group>"; };
+		DC42EA228F43BD1A12CE25FB224F1D09 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = ../_Prebuild/GeneratedFrameworks/Apollo/Apollo.framework; sourceTree = "<group>"; };
+		E8B990BAA28F17995BF8563301187AE2 /* Auth0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Auth0.debug.xcconfig; sourceTree = "<group>"; };
 		F3097BA4CA12D56DE4C9942F4B1408C7 /* Pods-Lotus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Lotus.debug.xcconfig"; sourceTree = "<group>"; };
-		FD752276E3CFC37FF30F5F4CE7CFC810 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = ../_Prebuild/GeneratedFrameworks/Apollo/Apollo.framework; sourceTree = "<group>"; };
+		F45DA73CBD39C60B1996548FC47BBF75 /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = ../_Prebuild/GeneratedFrameworks/Auth0/Auth0.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		047B0CBC0C8CEFA333F5F80F86A6F032 /* Frameworks */ = {
+		1965EBE50956F3D0A31D911CCAE54D47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				971F05ED9F9BD4CD8367F141100DA62E /* Foundation.framework in Frameworks */,
+				1F960348EF280C0022A79502131BDD70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		646816A4227CF465C4C2B992000FBA0E /* Frameworks */ = {
+		33ECC409F6EC9EC7D39A95BFDC3491E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12CFEAA5D9B334D888936F97F70FAC24 /* Foundation.framework in Frameworks */,
+				6F2C210C89D7965A008CD1CBB5629E05 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +238,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B1A7D1B71F5485F41D4468B59963E99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F45DA73CBD39C60B1996548FC47BBF75 /* Auth0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0CF5A8E101A53A44FB58302A0554F60A /* Pods-Lotus-LotusUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +261,16 @@
 			);
 			name = "Pods-Lotus-LotusUITests";
 			path = "Target Support Files/Pods-Lotus-LotusUITests";
+			sourceTree = "<group>";
+		};
+		124ED25EF2A03C062B74B451FC6F4A57 /* Auth0 */ = {
+			isa = PBXGroup;
+			children = (
+				0B1A7D1B71F5485F41D4468B59963E99 /* Frameworks */,
+				78078ACB3F91329EAA94472D791937DF /* Support Files */,
+			);
+			name = Auth0;
+			path = Auth0;
 			sourceTree = "<group>";
 		};
 		1B95FF56019CEF538700C36317597E27 /* Pods-LotusTests */ = {
@@ -177,41 +289,97 @@
 			path = "Target Support Files/Pods-LotusTests";
 			sourceTree = "<group>";
 		};
-		1C1B8AAE5DB724434A49916152C2E32D /* SwiftLint */ = {
+		357F1A955753AE0168D64335856846DF /* Apollo */ = {
 			isa = PBXGroup;
 			children = (
-				FC3FA1F4FCA4EAB5B7E13396D0948684 /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
-			sourceTree = "<group>";
-		};
-		333D079B51B6CF646522188F154604DE /* Apollo */ = {
-			isa = PBXGroup;
-			children = (
-				518F00D19CCE2B6AB0B31DFA6FF438F2 /* Core */,
-				EB332AC9BEAA9557FD9DF5C81E661D7F /* Frameworks */,
-				A02C1DA9DFF9CD858FB99408911C766A /* Support Files */,
+				E19364F83020F79369CF6837AFD79B25 /* Core */,
+				F689F92FBF6BCF58837633E6D662B055 /* Frameworks */,
+				E4404C5351EEC9982CEDF41FC30640D1 /* Support Files */,
 			);
 			name = Apollo;
 			path = Apollo;
 			sourceTree = "<group>";
 		};
-		518F00D19CCE2B6AB0B31DFA6FF438F2 /* Core */ = {
+		393C52AC952522102D366053FBCC4A0B /* JWTDecode */ = {
 			isa = PBXGroup;
 			children = (
-				FE3D88D499CDE100CFAFDDDF5EBBFF07 /* Frameworks */,
+				6F2DB94A169F7B7B54CEDC160FF1FF94 /* Frameworks */,
+				FD70C220FA371136CB2CCC0C13190C19 /* Support Files */,
 			);
-			name = Core;
+			name = JWTDecode;
+			path = JWTDecode;
 			sourceTree = "<group>";
 		};
-		8FF97BCB5C9438F1C087500AFA3A35AA /* Pods */ = {
+		430E4AA2C5772B08ECB9CF909F32554D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				333D079B51B6CF646522188F154604DE /* Apollo */,
-				1C1B8AAE5DB724434A49916152C2E32D /* SwiftLint */,
+				97B937488E77927BA95EE5B6F77BFC3E /* SimpleKeychain.debug.xcconfig */,
+				B57497C24FB7D02A76F866E98CEE49EE /* SimpleKeychain.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SimpleKeychain";
+			sourceTree = "<group>";
+		};
+		558C74712D2B18B841FE0F71BA59170E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FA0F1AC41F637F63D79E73E0FD31723 /* SimpleKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				7466134AB5BF112C740845AE5015B23D /* Frameworks */,
+				430E4AA2C5772B08ECB9CF909F32554D /* Support Files */,
+			);
+			name = SimpleKeychain;
+			path = SimpleKeychain;
+			sourceTree = "<group>";
+		};
+		6F2DB94A169F7B7B54CEDC160FF1FF94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				974BDB5032419C171977C880944A2B91 /* JWTDecode.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		710C4C03DC0A430C76140079FE722D6A /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7F99FCEC9B92449374EC79DF4CCA5835 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		7466134AB5BF112C740845AE5015B23D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5332C6C239479586D4312B0160E79571 /* SimpleKeychain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78078ACB3F91329EAA94472D791937DF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8B990BAA28F17995BF8563301187AE2 /* Auth0.debug.xcconfig */,
+				8DE30EB3A8930D729AD9BF55FE77E428 /* Auth0.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Auth0";
+			sourceTree = "<group>";
+		};
+		7F99FCEC9B92449374EC79DF4CCA5835 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E324DBF7849B90DD3F3BD4417680BD8 /* SwiftLint.debug.xcconfig */,
+				9BB7139EBF613EAAD2FFCE8D03AAA261 /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
 			sourceTree = "<group>";
 		};
 		9DB1948995E2C3937E45DBF149A85FD6 /* Products */ = {
@@ -222,16 +390,6 @@
 				8A1827BEC8AEDBDA2C1F83C55BD2411F /* Pods_LotusTests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A02C1DA9DFF9CD858FB99408911C766A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7B2FB1ED9E7077F260E71DEF2E66B67C /* Apollo.debug.xcconfig */,
-				8832775CC7C8FBE8ED146D05EBD696C1 /* Apollo.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Apollo";
 			sourceTree = "<group>";
 		};
 		A1EB2B0EE6A341F12F979D4BF8C7B1AC /* Pods-Lotus */ = {
@@ -251,6 +409,18 @@
 			path = "Target Support Files/Pods-Lotus";
 			sourceTree = "<group>";
 		};
+		A7FFDC69032100735BB7E5A03F499BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				357F1A955753AE0168D64335856846DF /* Apollo */,
+				124ED25EF2A03C062B74B451FC6F4A57 /* Auth0 */,
+				393C52AC952522102D366053FBCC4A0B /* JWTDecode */,
+				5FA0F1AC41F637F63D79E73E0FD31723 /* SimpleKeychain */,
+				710C4C03DC0A430C76140079FE722D6A /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +434,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				8FF97BCB5C9438F1C087500AFA3A35AA /* Pods */,
+				A7FFDC69032100735BB7E5A03F499BD0 /* Pods */,
 				9DB1948995E2C3937E45DBF149A85FD6 /* Products */,
 				ED13AD43A2CC19481ACB3DD8ABDDD195 /* Targets Support Files */,
 			);
@@ -278,12 +448,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB332AC9BEAA9557FD9DF5C81E661D7F /* Frameworks */ = {
+		E19364F83020F79369CF6837AFD79B25 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FD752276E3CFC37FF30F5F4CE7CFC810 /* Apollo.framework */,
+				558C74712D2B18B841FE0F71BA59170E /* Frameworks */,
 			);
-			name = Frameworks;
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E4404C5351EEC9982CEDF41FC30640D1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28783D27742F02112A0F7DD304D010E /* Apollo.debug.xcconfig */,
+				16732E8D6230F1906DD9178ACC953E6E /* Apollo.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Apollo";
 			sourceTree = "<group>";
 		};
 		ED13AD43A2CC19481ACB3DD8ABDDD195 /* Targets Support Files */ = {
@@ -296,31 +476,32 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		FC3FA1F4FCA4EAB5B7E13396D0948684 /* Support Files */ = {
+		F689F92FBF6BCF58837633E6D662B055 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				832187E928118A3F2E4EFFF96B5BBDA3 /* SwiftLint.debug.xcconfig */,
-				D84832D92B86CEB7EC274FAB5389C737 /* SwiftLint.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
-			sourceTree = "<group>";
-		};
-		FE3D88D499CDE100CFAFDDDF5EBBFF07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				DC42EA228F43BD1A12CE25FB224F1D09 /* Apollo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD70C220FA371136CB2CCC0C13190C19 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				669FF02F5A178BAEFB184CC4C2348067 /* JWTDecode.debug.xcconfig */,
+				834194233657DBEDC7B046786832D3C5 /* JWTDecode.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JWTDecode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		405B7AD99149E97C782E8D03CA0E49A1 /* Headers */ = {
+		54C9D0FF914A5CE70838769B19B6B7B8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F258AC41588499775376937F9CC9AF0 /* Pods-Lotus-LotusUITests-umbrella.h in Headers */,
+				674B32FA513CC27D414E29D6F4B7559B /* Pods-Lotus-LotusUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +513,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92843883F7F1601FC2E33F2436F2ECED /* Headers */ = {
+		997BC81D735C7384515E39DE03971650 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEA725D5DB1AC849E89A4632DAD07AD5 /* Pods-Lotus-umbrella.h in Headers */,
+				541C4FB3B2E6865F606F201B9F657BBD /* Pods-Lotus-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,18 +526,21 @@
 /* Begin PBXNativeTarget section */
 		696698721AD7C457847612B4D0ED83E8 /* Pods-Lotus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66088552BCC9BCCCB048C071D956DC2B /* Build configuration list for PBXNativeTarget "Pods-Lotus" */;
+			buildConfigurationList = 500EC47BD61D23D0F66335171766AA95 /* Build configuration list for PBXNativeTarget "Pods-Lotus" */;
 			buildPhases = (
-				92843883F7F1601FC2E33F2436F2ECED /* Headers */,
-				4F5E36990A609B52CCD60AD4A51208A1 /* Sources */,
-				047B0CBC0C8CEFA333F5F80F86A6F032 /* Frameworks */,
-				9E7F95AA7BC2FA95A072BE5CA6ECB5CA /* Resources */,
+				997BC81D735C7384515E39DE03971650 /* Headers */,
+				0D4D23599BFB5558200B1B8BA48C3BCD /* Sources */,
+				1965EBE50956F3D0A31D911CCAE54D47 /* Frameworks */,
+				2F469A455ED942FE4F0E9307E470621B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				877EA13549053270E00F0697C0FDD172 /* PBXTargetDependency */,
-				5CFA084FA7C8F8F41AD61F569BA76B3E /* PBXTargetDependency */,
+				EE1C6461F3916468F26DD15C7307CE27 /* PBXTargetDependency */,
+				72354D2DFA6A73836C555CC4D731CA8D /* PBXTargetDependency */,
+				4BBD3834404AAB53AA2F96D45AE2ECD7 /* PBXTargetDependency */,
+				F68AEB06A3474999F7972D3A73CDE124 /* PBXTargetDependency */,
+				AA3E48E81A30D83CF74DAAA9EE45057D /* PBXTargetDependency */,
 			);
 			name = "Pods-Lotus";
 			productName = "Pods-Lotus";
@@ -365,18 +549,21 @@
 		};
 		AC61BAACA4EA88F375FA43419AFA0227 /* Pods-Lotus-LotusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C38EA2A20A54E736258C20774CBC6BA /* Build configuration list for PBXNativeTarget "Pods-Lotus-LotusUITests" */;
+			buildConfigurationList = 8EA735388A5E696620E664C72922C496 /* Build configuration list for PBXNativeTarget "Pods-Lotus-LotusUITests" */;
 			buildPhases = (
-				405B7AD99149E97C782E8D03CA0E49A1 /* Headers */,
-				221475286BBC251F00EA09E1FCE659E7 /* Sources */,
-				646816A4227CF465C4C2B992000FBA0E /* Frameworks */,
-				265318CF54791D38E81DD2DC76271127 /* Resources */,
+				54C9D0FF914A5CE70838769B19B6B7B8 /* Headers */,
+				55BBDD72D72A5108AA25CFBBA8A4E271 /* Sources */,
+				33ECC409F6EC9EC7D39A95BFDC3491E2 /* Frameworks */,
+				978D45B2B18786CC8070EA69B4752568 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				34E912495A80A53D26F550E97D3B3373 /* PBXTargetDependency */,
-				A57977926776ED5C12BBB193A079E126 /* PBXTargetDependency */,
+				05092BBFA2C60FF367434A60270C1938 /* PBXTargetDependency */,
+				1CBA32785C3076FF42DB877787FC721B /* PBXTargetDependency */,
+				A6DAACDC7F12D2238A76D83D9329EFBE /* PBXTargetDependency */,
+				0C5501C72B9362C21D81281CB33BEC69 /* PBXTargetDependency */,
+				ECB9A2CA2A4806ACFF22F0DF53018640 /* PBXTargetDependency */,
 			);
 			name = "Pods-Lotus-LotusUITests";
 			productName = "Pods-Lotus-LotusUITests";
@@ -425,16 +612,19 @@
 			projectRoot = "";
 			targets = (
 				30EE3CABB612307A688C40B61BFA74CC /* Apollo */,
+				D6A440A37D50015E369921294617C612 /* Auth0 */,
+				22E1F0E7CBECE226FC294E79C21B0033 /* JWTDecode */,
 				696698721AD7C457847612B4D0ED83E8 /* Pods-Lotus */,
 				AC61BAACA4EA88F375FA43419AFA0227 /* Pods-Lotus-LotusUITests */,
 				C2CC5E34DDFE56A0F5DB772815EC5DA9 /* Pods-LotusTests */,
+				192AEFA366AAFE1F45B918C022FE489C /* SimpleKeychain */,
 				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		265318CF54791D38E81DD2DC76271127 /* Resources */ = {
+		2F469A455ED942FE4F0E9307E470621B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,7 +638,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9E7F95AA7BC2FA95A072BE5CA6ECB5CA /* Resources */ = {
+		978D45B2B18786CC8070EA69B4752568 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,48 +656,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		221475286BBC251F00EA09E1FCE659E7 /* Sources */ = {
+		0D4D23599BFB5558200B1B8BA48C3BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A12BAA0A33A264B231948A8873EF573E /* Pods-Lotus-LotusUITests-dummy.m in Sources */,
+				9F5B05C47B442B6AF60361514DE8FCAC /* Pods-Lotus-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4F5E36990A609B52CCD60AD4A51208A1 /* Sources */ = {
+		55BBDD72D72A5108AA25CFBBA8A4E271 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911396155BB75C4778E95D532658818E /* Pods-Lotus-dummy.m in Sources */,
+				42DAA32EF0B28D428BF9CF2EC6135E6A /* Pods-Lotus-LotusUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		34E912495A80A53D26F550E97D3B3373 /* PBXTargetDependency */ = {
+		05092BBFA2C60FF367434A60270C1938 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Apollo;
 			target = 30EE3CABB612307A688C40B61BFA74CC /* Apollo */;
-			targetProxy = 61CEB48D768D45838DE5A9CD5E377946 /* PBXContainerItemProxy */;
+			targetProxy = 29BB61B8FD6A622AE6D516B72B81B86D /* PBXContainerItemProxy */;
 		};
-		5CFA084FA7C8F8F41AD61F569BA76B3E /* PBXTargetDependency */ = {
+		0C5501C72B9362C21D81281CB33BEC69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = A4AD84657A6D25ADB82A9C0969AECA5A /* PBXContainerItemProxy */;
+			name = SimpleKeychain;
+			target = 192AEFA366AAFE1F45B918C022FE489C /* SimpleKeychain */;
+			targetProxy = 2399A29B6E2907E481DE46DC4CDD9320 /* PBXContainerItemProxy */;
 		};
-		877EA13549053270E00F0697C0FDD172 /* PBXTargetDependency */ = {
+		1CBA32785C3076FF42DB877787FC721B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Apollo;
-			target = 30EE3CABB612307A688C40B61BFA74CC /* Apollo */;
-			targetProxy = B6D2A9BCAE5E573F163AC3A84F96F0B1 /* PBXContainerItemProxy */;
+			name = Auth0;
+			target = D6A440A37D50015E369921294617C612 /* Auth0 */;
+			targetProxy = FEAEC7974FEBE5DFBC56F4397A3EC8D3 /* PBXContainerItemProxy */;
 		};
-		A57977926776ED5C12BBB193A079E126 /* PBXTargetDependency */ = {
+		46D091B150E8815ABF7CCC31B241D6C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 1A3204E2DD115E2D0C9DDEFDA6A7CB07 /* PBXContainerItemProxy */;
+			name = JWTDecode;
+			target = 22E1F0E7CBECE226FC294E79C21B0033 /* JWTDecode */;
+			targetProxy = 9D80FA751CF0CC47F9785327B502CCBC /* PBXContainerItemProxy */;
+		};
+		4BBD3834404AAB53AA2F96D45AE2ECD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JWTDecode;
+			target = 22E1F0E7CBECE226FC294E79C21B0033 /* JWTDecode */;
+			targetProxy = 3E00FD5BF000B150DD1627948B31CF13 /* PBXContainerItemProxy */;
+		};
+		5E2290C2057785A9EEE986532E100006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleKeychain;
+			target = 192AEFA366AAFE1F45B918C022FE489C /* SimpleKeychain */;
+			targetProxy = E78670FE40C54B9E03F70D8BE25EFB69 /* PBXContainerItemProxy */;
+		};
+		72354D2DFA6A73836C555CC4D731CA8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Auth0;
+			target = D6A440A37D50015E369921294617C612 /* Auth0 */;
+			targetProxy = 8B65869F032295CAEA5FC8FFAF924F15 /* PBXContainerItemProxy */;
+		};
+		A6DAACDC7F12D2238A76D83D9329EFBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JWTDecode;
+			target = 22E1F0E7CBECE226FC294E79C21B0033 /* JWTDecode */;
+			targetProxy = CF083E6F1CA1815B9AFA0C26E1326B79 /* PBXContainerItemProxy */;
 		};
 		A97A0F8B5670BFD0E25A7E0751A4C2D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -515,9 +729,50 @@
 			target = 696698721AD7C457847612B4D0ED83E8 /* Pods-Lotus */;
 			targetProxy = EB06C617F43276487AFA696E6CC932A8 /* PBXContainerItemProxy */;
 		};
+		AA3E48E81A30D83CF74DAAA9EE45057D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = B49408F9956FD145040F2213819F99C9 /* PBXContainerItemProxy */;
+		};
+		ECB9A2CA2A4806ACFF22F0DF53018640 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = C68219CC77336F54F24BF61E276B2BA8 /* PBXContainerItemProxy */;
+		};
+		EE1C6461F3916468F26DD15C7307CE27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Apollo;
+			target = 30EE3CABB612307A688C40B61BFA74CC /* Apollo */;
+			targetProxy = 283658AF10F2CE810CF180E455262248 /* PBXContainerItemProxy */;
+		};
+		F68AEB06A3474999F7972D3A73CDE124 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SimpleKeychain;
+			target = 192AEFA366AAFE1F45B918C022FE489C /* SimpleKeychain */;
+			targetProxy = 346D0783BE405F688C1D2C75535B0D35 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1119D6C7DE4335D0AC426A221DA50F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834194233657DBEDC7B046786832D3C5 /* JWTDecode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -582,7 +837,7 @@
 			};
 			name = Debug;
 		};
-		3BC30D67923D4DEF7DA90DE222733F15 /* Debug */ = {
+		158C23671D6F995B767B19BC4E563A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3097BA4CA12D56DE4C9942F4B1408C7 /* Pods-Lotus.debug.xcconfig */;
 			buildSettings = {
@@ -620,59 +875,9 @@
 			};
 			name = Debug;
 		};
-		46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */ = {
+		2228D3E29B2D629E391EDD72F2690949 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832187E928118A3F2E4EFFF96B5BBDA3 /* SwiftLint.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5386A594B5106173E48A1011325D3EF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8832775CC7C8FBE8ED146D05EBD696C1 /* Apollo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		55DD740115BE746C8DBB7753806D85D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D84832D92B86CEB7EC274FAB5389C737 /* SwiftLint.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		8D19022BC90DF1908AFE12475E0823C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B2FB1ED9E7077F260E71DEF2E66B67C /* Apollo.debug.xcconfig */;
+			baseConfigurationReference = 669FF02F5A178BAEFB184CC4C2348067 /* JWTDecode.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -686,7 +891,7 @@
 			};
 			name = Debug;
 		};
-		AA0FA280A0DD2A1FD0A8EF60016F550C /* Debug */ = {
+		28FDB52412534FEC684E6B555000FFA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B1BF64EA71362C1A3107C0B7733CAC0 /* Pods-Lotus-LotusUITests.debug.xcconfig */;
 			buildSettings = {
@@ -724,7 +929,89 @@
 			};
 			name = Debug;
 		};
-		AAFD1C6BEA873EAB8E20ECADB9D8688D /* Release */ = {
+		31639515DAE0B310EE707453AA8C693E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B937488E77927BA95EE5B6F77BFC3E /* SimpleKeychain.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B00091E6C81F97497F35941644F0D2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B990BAA28F17995BF8563301187AE2 /* Auth0.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E324DBF7849B90DD3F3BD4417680BD8 /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5386A594B5106173E48A1011325D3EF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16732E8D6230F1906DD9178ACC953E6E /* Apollo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55DD740115BE746C8DBB7753806D85D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB7139EBF613EAAD2FFCE8D03AAA261 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62C909D3EC6F46CDCBD1380E59875DA1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 129447C0B3267DF8DB0A149F4638599A /* Pods-Lotus.release.xcconfig */;
 			buildSettings = {
@@ -763,44 +1050,38 @@
 			};
 			name = Release;
 		};
-		B2E51DCBE735AA7EFC22067937797409 /* Release */ = {
+		6B380118E889AD42BA044DD702CE2C5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87733C3E7FA3AABB3898BEDE303A7D5D /* Pods-Lotus-LotusUITests.release.xcconfig */;
+			baseConfigurationReference = 8DE30EB3A8930D729AD9BF55FE77E428 /* Auth0.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Lotus-LotusUITests/Pods-Lotus-LotusUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Lotus-LotusUITests/Pods-Lotus-LotusUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8D19022BC90DF1908AFE12475E0823C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28783D27742F02112A0F7DD304D010E /* Apollo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		B451C331828982EFDA965F2E0CFB985E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -879,6 +1160,62 @@
 			};
 			name = Debug;
 		};
+		E65EE43459266276DF92A5CFD87908C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87733C3E7FA3AABB3898BEDE303A7D5D /* Pods-Lotus-LotusUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Lotus-LotusUITests/Pods-Lotus-LotusUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Lotus-LotusUITests/Pods-Lotus-LotusUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EAF2801BDB60C2D82E1A380AD277EA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57497C24FB7D02A76F866E98CEE49EE /* SimpleKeychain.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -951,6 +1288,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		500EC47BD61D23D0F66335171766AA95 /* Build configuration list for PBXNativeTarget "Pods-Lotus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				158C23671D6F995B767B19BC4E563A92 /* Debug */,
+				62C909D3EC6F46CDCBD1380E59875DA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A4BF848F7757786B0316B3F0024E25C /* Build configuration list for PBXNativeTarget "Pods-LotusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -960,20 +1306,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66088552BCC9BCCCB048C071D956DC2B /* Build configuration list for PBXNativeTarget "Pods-Lotus" */ = {
+		820AD6D3178F54233E3D1EB4CC447023 /* Build configuration list for PBXAggregateTarget "SimpleKeychain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BC30D67923D4DEF7DA90DE222733F15 /* Debug */,
-				AAFD1C6BEA873EAB8E20ECADB9D8688D /* Release */,
+				31639515DAE0B310EE707453AA8C693E /* Debug */,
+				EAF2801BDB60C2D82E1A380AD277EA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C38EA2A20A54E736258C20774CBC6BA /* Build configuration list for PBXNativeTarget "Pods-Lotus-LotusUITests" */ = {
+		8EA735388A5E696620E664C72922C496 /* Build configuration list for PBXNativeTarget "Pods-Lotus-LotusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA0FA280A0DD2A1FD0A8EF60016F550C /* Debug */,
-				B2E51DCBE735AA7EFC22067937797409 /* Release */,
+				28FDB52412534FEC684E6B555000FFA0 /* Debug */,
+				E65EE43459266276DF92A5CFD87908C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -992,6 +1338,24 @@
 			buildConfigurations = (
 				46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */,
 				55DD740115BE746C8DBB7753806D85D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE4D929679ABB62BF313A1FC6B6587DC /* Build configuration list for PBXAggregateTarget "JWTDecode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2228D3E29B2D629E391EDD72F2690949 /* Debug */,
+				1119D6C7DE4335D0AC426A221DA50F4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4D6DC828C5E88F19EEB9B193B67BED3 /* Build configuration list for PBXAggregateTarget "Auth0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B00091E6C81F97497F35941644F0D2C /* Debug */,
+				6B380118E889AD42BA044DD702CE2C5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
