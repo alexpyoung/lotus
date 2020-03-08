@@ -26,6 +26,8 @@
 		FA25DED824147391008641AD /* Queries.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED724147391008641AD /* Queries.gql */; };
 		FA25DEDA2414817E008641AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED92414817E008641AD /* Auth0.plist */; };
 		FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEDD24148A7C008641AD /* Authentication.swift */; };
+		FA25DEE224152556008641AD /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEE124152556008641AD /* RoundedButton.swift */; };
+		FA25DEE424153146008641AD /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEE324153145008641AD /* Copy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		FA25DED724147391008641AD /* Queries.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.gql; sourceTree = "<group>"; };
 		FA25DED92414817E008641AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		FA25DEDD24148A7C008641AD /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		FA25DEE124152556008641AD /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FA25DEE324153145008641AD /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,11 +159,13 @@
 		FA25DE8E24146B0E008641AD /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				FA25DEDF24152524008641AD /* UI */,
 				FA25DECD24146EAF008641AD /* GraphQL */,
 				FA25DEDC24148A6F008641AD /* Services */,
 				FA25DE8F24146B0E008641AD /* AppDelegate.swift */,
 				FA25DE9124146B0E008641AD /* SceneDelegate.swift */,
 				FA25DE9324146B0E008641AD /* ContentView.swift */,
+				FA25DEE324153145008641AD /* Copy.swift */,
 				FA25DE9524146B10008641AD /* Assets.xcassets */,
 				FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */,
 				FA25DED92414817E008641AD /* Auth0.plist */,
@@ -214,6 +220,22 @@
 				FA25DEDD24148A7C008641AD /* Authentication.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA25DEDF24152524008641AD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DEE02415252D008641AD /* Library */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FA25DEE02415252D008641AD /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DEE124152556008641AD /* RoundedButton.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,8 +523,10 @@
 				FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */,
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DE9424146B0E008641AD /* ContentView.swift in Sources */,
+				FA25DEE424153146008641AD /* Copy.swift in Sources */,
 				FA25DED2241470B4008641AD /* API.swift in Sources */,
 				FA25DED42414715A008641AD /* Network.swift in Sources */,
+				FA25DEE224152556008641AD /* RoundedButton.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
