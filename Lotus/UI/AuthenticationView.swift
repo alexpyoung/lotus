@@ -13,6 +13,7 @@ struct AuthenticationView: View {
   @State var email: String = ""
   @State var password: String = ""
   @State var mode: AuthenticationMode = .signUp
+  @State var isLoading: Bool = false
   private var isEmpty: Bool {
     switch self.mode {
     case .logIn:
@@ -21,55 +22,77 @@ struct AuthenticationView: View {
       return self.email.isEmpty || self.password.isEmpty || self.name.isEmpty
     }
   }
-
-  private func onLoginPress() {
-    Authentication.login(email: self.email, password: self.password) {
-      switch $0 {
-      case .success(result: let credentials):
-        guard
-          let token = credentials.idToken,
-          let jwt = try? decode(jwt: token),
-          let auth0id = jwt.body["sub"]
-        else {
-          return
-        }
-        print(auth0id)
-      case .failure(error: let error):
-        print(error)
-      }
+  private var greeting: Copy {
+    switch self.mode {
+    case .logIn: return .welcome
+    case .signUp: return .hello
     }
   }
-
-  private func onSignupPress() {
-    Authentication.signup(email: self.email, password: self.password) { print($0) }
+  var emailView: some View {
+    Input(label: .email, value: self.$email, style: .plaintext)
+      .autocapitalization(.none)
+      .keyboardType(.emailAddress)
+  }
+  var passwordView: some View {
+    Input(label: .password, value: self.$password, style: .secure)
   }
 
   private func reset(mode: AuthenticationMode) {
+    self.name = ""
     self.email = ""
     self.password = ""
     self.mode = mode
   }
 
-  var body: some View {
+  var content: some View {
     switch self.mode {
     case .signUp:
-      return AnyView(VStack(alignment: .leading, spacing: 8) {
+      return AnyView(VStack {
         Input(label: .name, value: self.$name, style: .plaintext)
-        Input(label: .email, value: self.$email, style: .plaintext)
-        Input(label: .password, value: self.$password, style: .secure)
-        RoundedButton(title: .signup, style: .filled, action: self.onSignupPress)
-          .disabled(self.isEmpty)
-        RoundedButton(title: .login, style: .outline) { self.reset(mode: .logIn) }
+          .autocapitalization(.words)
+        self.emailView
+        self.passwordView
+        FilledButton(title: .signup, isLoading: self.$isLoading) {
+          self.isLoading = true
+          Authentication.signUp(email: self.email, password: self.password, name: self.name) { result in
+            self.isLoading = false
+            print(result)
+          }
+        }
+        .disabled(self.isEmpty, brightness: 0.2)
+        .padding(.top, 16)
+        TextButton(title: .existingAccount, style: .subheadline) { self.reset(mode: .logIn) }
+          .disabled(self.isLoading, brightness: 0.2)
       })
     case .logIn:
-      return AnyView(VStack(alignment: .leading, spacing: 8) {
-        Input(label: .email, value: self.$email, style: .plaintext)
-        Input(label: .password, value: self.$password, style: .secure)
-        RoundedButton(title: .login, style: .filled, action: self.onLoginPress)
-          .disabled(self.isEmpty)
-        RoundedButton(title: .signup, style: .outline) { self.reset(mode: .signUp) }
+      return AnyView(VStack {
+        self.emailView
+        self.passwordView
+        FilledButton(title: .login, isLoading: self.$isLoading) {
+          self.isLoading = true
+          Authentication.logIn(email: self.email, password: self.password) { result in
+            self.isLoading = false
+            print(result)
+          }
+        }
+        .disabled(self.isEmpty, brightness: 0.2)
+        .padding(.top, 16)
+        TextButton(title: .newAccount, style: .subheadline) { self.reset(mode: .signUp) }
+          .disabled(self.isLoading, brightness: 0.2)
       })
     }
+  }
+
+  var body: some View {
+    return VStack(alignment: .leading, spacing: 24) {
+      Text(self.greeting)
+        .font(.system(.largeTitle))
+        .fontWeight(.bold)
+        .foregroundColor(.offBlack)
+      self.content
+    }
+    .padding(.vertical, 12)
+    .padding(.horizontal, 24)
   }
 }
 

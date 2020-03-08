@@ -21,10 +21,11 @@ struct Input: View {
   }
 
   var body: some View {
-    self.field
-      .padding(.vertical, 12)
-      .padding(.horizontal, 24)
-      .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray, lineWidth: 1))
+    VStack {
+      self.field
+      Divider()
+    }
+    .padding(.vertical, 8)
   }
 }
 
