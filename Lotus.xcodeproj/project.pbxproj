@@ -22,6 +22,8 @@
 		FA25DECF24146F5D008641AD /* Mutations.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DECE24146F5D008641AD /* Mutations.gql */; };
 		FA25DED2241470B4008641AD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DED1241470B4008641AD /* API.swift */; };
 		FA25DED824147391008641AD /* Queries.gql in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED724147391008641AD /* Queries.gql */; };
+		FA25DEDA2414817E008641AD /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA25DED92414817E008641AD /* Auth0.plist */; };
+		FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEDD24148A7C008641AD /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		FA25DECE24146F5D008641AD /* Mutations.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutations.gql; sourceTree = "<group>"; };
 		FA25DED1241470B4008641AD /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		FA25DED724147391008641AD /* Queries.gql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.gql; sourceTree = "<group>"; };
+		FA25DED92414817E008641AD /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		FA25DEDD24148A7C008641AD /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,11 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				FA25DECD24146EAF008641AD /* GraphQL */,
+				FA25DEDC24148A6F008641AD /* Services */,
 				FA25DE8F24146B0E008641AD /* AppDelegate.swift */,
 				FA25DE9124146B0E008641AD /* SceneDelegate.swift */,
 				FA25DE9324146B0E008641AD /* ContentView.swift */,
 				FA25DE9524146B10008641AD /* Assets.xcassets */,
 				FA25DE9A24146B10008641AD /* LaunchScreen.storyboard */,
+				FA25DED92414817E008641AD /* Auth0.plist */,
 				FA25DE9D24146B10008641AD /* Info.plist */,
 				FA25DE9724146B10008641AD /* Preview Content */,
 			);
@@ -194,6 +200,14 @@
 				FA25DED1241470B4008641AD /* API.swift */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		FA25DEDC24148A6F008641AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA25DEDD24148A7C008641AD /* Authentication.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +327,7 @@
 				FA25DE9924146B10008641AD /* Preview Assets.xcassets in Resources */,
 				FA25DED824147391008641AD /* Queries.gql in Resources */,
 				FA25DE9624146B10008641AD /* Assets.xcassets in Resources */,
+				FA25DEDA2414817E008641AD /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +495,7 @@
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DE9424146B0E008641AD /* ContentView.swift in Sources */,
 				FA25DED2241470B4008641AD /* API.swift in Sources */,
+				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +670,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.Lotus;
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.lotus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -675,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.Lotus;
+				PRODUCT_BUNDLE_IDENTIFIER = io.alexpyoung.lotus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

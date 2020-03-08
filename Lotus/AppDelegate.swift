@@ -6,6 +6,7 @@
 //  Copyright © 2020 Alex Young. All rights reserved.
 //
 
+import Auth0
 import UIKit
 
 @UIApplicationMain
@@ -24,5 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     options: UIScene.ConnectionOptions
   ) -> UISceneConfiguration {
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+  }
+
+  func application(
+    _ app: UIApplication,
+    open url: URL,
+    options: [UIApplication.OpenURLOptionsKey: Any]
+  ) -> Bool {
+    return Auth0.resumeAuth(url, options: options)
   }
 }
