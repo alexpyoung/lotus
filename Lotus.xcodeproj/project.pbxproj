@@ -28,6 +28,7 @@
 		FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEDD24148A7C008641AD /* Authentication.swift */; };
 		FA25DEE224152556008641AD /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEE124152556008641AD /* RoundedButton.swift */; };
 		FA25DEE424153146008641AD /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEE324153145008641AD /* Copy.swift */; };
+		FA25DEF2241534F4008641AD /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA25DEF1241534F4008641AD /* Input.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FA25DEDD24148A7C008641AD /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		FA25DEE124152556008641AD /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FA25DEE324153145008641AD /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
+		FA25DEF1241534F4008641AD /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -233,6 +235,7 @@
 		FA25DEE02415252D008641AD /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FA25DEF1241534F4008641AD /* Input.swift */,
 				FA25DEE124152556008641AD /* RoundedButton.swift */,
 			);
 			path = Library;
@@ -527,6 +530,7 @@
 				FA25DED2241470B4008641AD /* API.swift in Sources */,
 				FA25DED42414715A008641AD /* Network.swift in Sources */,
 				FA25DEE224152556008641AD /* RoundedButton.swift in Sources */,
+				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
