@@ -1,5 +1,6 @@
 import Auth0
 import JWTDecode
+import SwiftKeychainWrapper
 
 // swiftlint:disable identifier_name
 private struct Config: Codable {
@@ -8,8 +9,9 @@ private struct Config: Codable {
 }
 // swiftlint:enable identifier_name
 
-enum DecodeError: Error {
-  case plist
+enum AuthenticationError: Error {
+  case plistConfiguration
+  case jwtPersistence
 }
 
 enum Result {
@@ -21,6 +23,15 @@ class Authentication {
 
   static let shared = Authentication()
   private(set) var jwt: String?
+  private(set) var decoded: JWT?
+
+  init() {
+    guard let jwt = KeychainWrapper.standard.string(forKey: "jwt") else {
+      return
+    }
+    self.jwt = jwt
+    self.decoded = try? decode(jwt: jwt)
+  }
 
   private static var config: Config? = {
     guard
@@ -54,7 +65,7 @@ class Authentication {
     callback: @escaping (Auth0.Result<Credentials>) -> Void
   ) {
     guard let domain = config?.Domain else {
-      callback(.failure(error: DecodeError.plist))
+      callback(.failure(error: AuthenticationError.plistConfiguration))
       return
     }
     Auth0
@@ -68,12 +79,23 @@ class Authentication {
         parameters: nil
       )
       .start({
-        switch $0 {
-        case .success(result: let credentials):
-          self.shared.jwt = credentials.idToken
-        case .failure: break
+        do {
+          switch $0 {
+          case .success(result: let credentials):
+            guard let token = credentials.idToken else {
+              throw AuthenticationError.jwtPersistence
+            }
+            self.shared.jwt = token
+            guard KeychainWrapper.standard.set(token, forKey: "jwt") else {
+              throw AuthenticationError.jwtPersistence
+            }
+            self.shared.decoded = try decode(jwt: token)
+          case .failure: break
+          }
+          callback($0)
+        } catch let error {
+          callback(.failure(error: error))
         }
-        callback($0)
       })
   }
 
@@ -92,13 +114,11 @@ class Authentication {
           case .success(let credentials):
             print("DEBUG:", "Authenticated", credentials)
             guard
-              let token = credentials.idToken,
-              let jwt = try? decode(jwt: token),
+              let jwt = self.shared.decoded,
               let auth0id = jwt.body["sub"] as? String
               else {
                 return
             }
-            print("DEBUG: JWT", token)
             Network.shared.apollo.perform(mutation: SignUpMutation(auth0id: auth0id, name: name)) {
               switch $0 {
               case .success(let result):

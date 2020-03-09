@@ -10,6 +10,7 @@ enum Copy: CustomStringConvertible {
   case existingAccount
   case workouts
   case plans
+  // swiftlint:disable identifier_name
   case me
 
   var description: String {
