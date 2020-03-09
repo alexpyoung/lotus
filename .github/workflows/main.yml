@@ -5,24 +5,15 @@ on:
   pull_request:
     branches: [ master ]
 jobs:
-  build:
-    runs-on: macos-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
-    steps:
-    - name: Fastlane Action
-      uses: maierj/fastlane-action@v1.4.0
-      with:
-        lane: build
-        skip-tracking: true 
   test:
     runs-on: macos-latest
     strategy:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
     steps:
-    - name: Fastlane Action
+    - name: Install
+      run: bundle install
+    - name: Test
       uses: maierj/fastlane-action@v1.4.0
       with:
         lane: test
