@@ -1,4 +1,5 @@
 node_modules
+Lotus/GraphQL/schema.json
 DerivedData
 fastlane/report.xml
 fastlane/test_output
