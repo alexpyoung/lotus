@@ -5,22 +5,10 @@
 ### Installation
 ```
 yarn install
+bundle install
 ```
 
-### Build
+### Getting Started
 ```
-bundle install
-bundle exec fastlane ios build
-```
-
-### Test
-```
-bundle install
-bundle exec fastlane ios test
-```
-
-### Add Dependency
-```
-bundle install
-bundle exec fastlane ios install
+bundle exec fastlane lanes
 ```
