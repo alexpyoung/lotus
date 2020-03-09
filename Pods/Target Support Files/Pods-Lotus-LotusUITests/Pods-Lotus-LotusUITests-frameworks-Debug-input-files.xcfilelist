@@ -7,3 +7,5 @@ ${PODS_ROOT}/JWTDecode/JWTDecode.framework
 ${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM
 ${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework
 ${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM
+${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework
+${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework.dSYM

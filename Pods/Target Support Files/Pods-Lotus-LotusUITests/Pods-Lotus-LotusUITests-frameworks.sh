@@ -220,6 +220,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
   install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
   install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
+  install_framework "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
+  install_dsym "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework.dSYM"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/Apollo/Apollo.framework"
@@ -230,6 +232,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
   install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
   install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
+  install_framework "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
+  install_dsym "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework.dSYM"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

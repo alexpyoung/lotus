@@ -6,3 +6,5 @@ ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework
 ${DWARF_DSYM_FOLDER_PATH}/JWTDecode.framework.dSYM
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework
 ${DWARF_DSYM_FOLDER_PATH}/SimpleKeychain.framework.dSYM
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework
+${DWARF_DSYM_FOLDER_PATH}/SwiftKeychainWrapper.framework.dSYM

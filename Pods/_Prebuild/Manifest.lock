@@ -7,11 +7,13 @@ PODS:
     - SimpleKeychain
   - JWTDecode (2.4.1)
   - SimpleKeychain (0.11.0)
+  - SwiftKeychainWrapper (3.4.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
   - Apollo (~> 0.23)
   - Auth0 (~> 1.22)
+  - SwiftKeychainWrapper (~> 3.4)
   - SwiftLint (~> 0.39)
 
 SPEC REPOS:
@@ -20,6 +22,7 @@ SPEC REPOS:
     - Auth0
     - JWTDecode
     - SimpleKeychain
+    - SwiftKeychainWrapper
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -27,8 +30,9 @@ SPEC CHECKSUMS:
   Auth0: c3dd0b6f9031e9cc38be2a6973f766f33ccbad83
   JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
   SimpleKeychain: 2c135c65e64cd4e7df7ec418407be83ee07ba1c2
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 19a9d79488809f1e6f9d90ba9ec4d38e89deadcf
+PODFILE CHECKSUM: 0e4581bf1268e81ca6f474111aaf312884810c06
 
 COCOAPODS: 1.9.0
