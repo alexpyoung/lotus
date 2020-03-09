@@ -25,7 +25,6 @@ platform :ios do
   lane :test do
     run_tests(
       include_simulator_logs: false,
-      devices: ['iPhone Xs Max'],
       derived_data_path: DERIVED_DATA_PATH,
     )
   end
