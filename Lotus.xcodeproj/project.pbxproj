@@ -532,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eo pipefail\n\nyarn run download_gql_schema\nyarn run codegen_gql\n";
+			shellScript = "set -eo pipefail\n\nexport HASURA_ADMIN_SECRET=$(plutil -p \"$SRCROOT/Lotus/Services/Apollo.plist\" | grep adminSecret | cut -d'\"' -f4) \nyarn run download_gql_schema\nyarn run codegen_gql\n";
 		};
 		FA25DEF3241540DF008641AD /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
