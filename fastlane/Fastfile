@@ -6,10 +6,12 @@ platform :ios do
 
   DERIVED_DATA_PATH = '/tmp/DerivedData'
 
+  desc 'Install Cocoapods'
   lane :install do
     cocoapods(try_repo_update_on_error: true)
   end
 
+  desc 'Compile'
   lane :build do
     build_ios_app(
       skip_archive: true,
@@ -19,11 +21,20 @@ platform :ios do
     )
   end
 
+  desc 'Run unit and UI tests'
   lane :test do
     run_tests(
       include_simulator_logs: false,
       devices: ['iPhone Xs Max'],
       derived_data_path: DERIVED_DATA_PATH,
+    )
+  end
+
+  desc 'SwiftLint'
+  lane :lint do
+    swiftlint(
+      strict: true,
+      executable: 'Pods/SwiftLint/swiftlint',
     )
   end
 end
