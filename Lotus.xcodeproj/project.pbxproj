@@ -532,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "yarn run codegen_gql\nyarn run download_gql_schema &> /tmp/yarn-error.log || true\n";
+			shellScript = "set -eo pipefail\n\nyarn run download_gql_schema\nyarn run codegen_gql\n";
 		};
 		FA25DEF3241540DF008641AD /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -550,7 +550,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --strict\n";
+			shellScript = "set -eo pipefail\n\n\"${PODS_ROOT}/SwiftLint/swiftlint\" --strict\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -8,7 +8,7 @@
     "apollo": "^2.25.0"
   },
   "scripts": {
-    "download_gql_schema": "apollo schema:download --endpoint https://lotus-training.herokuapp.com/v1/graphql && mv schema.json Lotus/GraphQL/",
+    "download_gql_schema": "apollo schema:download --header='x-hasura-admin-Secret: secret' --endpoint https://lotus-training.herokuapp.com/v1/graphql && mv schema.json Lotus/GraphQL/",
     "codegen_gql": "apollo codegen:generate --target=swift --includes=./**/*.gql --localSchemaFile=Lotus/GraphQL/schema.json Lotus/GraphQL/Operations.swift"
   }
 }
