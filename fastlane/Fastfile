@@ -16,6 +16,7 @@ platform :ios do
     build_ios_app(
       skip_archive: true,
       skip_package_ipa: true,
+      skip_codesigning: true,
       output_directory: '.',
       derived_data_path: DERIVED_DATA_PATH,
       xcargs: '-allowProvisioningUpdates',

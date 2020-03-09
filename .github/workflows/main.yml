@@ -3,19 +3,19 @@ on:
   push:
     branches: [ master ]
 jobs:
-#   build:
-#     runs-on: macos-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#     - name: Install Apollo CLI
-#       run: yarn install
-#     - name: Install Fastlane
-#       run: bundle install
-#     - name: Compile the app
-#       run: bundle exec fastlane ios build
-#       env:
-#         FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-#         FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+  build:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Apollo CLI
+      run: yarn install
+    - name: Install Fastlane
+      run: bundle install
+    - name: Compile the app
+      run: bundle exec fastlane ios build
+      env:
+        FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
 #   test:
 #     runs-on: macos-latest
 #     steps:
