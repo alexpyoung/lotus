@@ -1,6 +1,6 @@
 source 'https://cdn.cocoapods.org/'
 
-platform :ios, '12.0'
+platform :ios, '13.0'
 plugin 'cocoapods-binary'
 
 target 'Lotus' do

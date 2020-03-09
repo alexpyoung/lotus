@@ -710,6 +710,7 @@
 				DEVELOPMENT_TEAM = ML4K9AC7JP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lotus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -731,6 +732,7 @@
 				DEVELOPMENT_TEAM = ML4K9AC7JP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Lotus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
