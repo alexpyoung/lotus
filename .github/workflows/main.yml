@@ -6,7 +6,10 @@ on:
     branches: [ master ]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
     steps:
     - name: Fastlane Action
       uses: maierj/fastlane-action@v1.4.0
@@ -14,7 +17,10 @@ jobs:
         lane: build
         skip-tracking: true 
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
     steps:
     - name: Fastlane Action
       uses: maierj/fastlane-action@v1.4.0
