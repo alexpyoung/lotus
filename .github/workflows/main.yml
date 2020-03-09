@@ -11,10 +11,5 @@ jobs:
         matrix:
           destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
     steps:
-    - name: Install
-      run: bundle install
     - name: Test
-      uses: maierj/fastlane-action@v1.4.0
-      with:
-        lane: test
-        skip-tracking: true
+      run: bundle exec fastlane ios test
