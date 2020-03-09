@@ -10,7 +10,7 @@ enum Copy: CustomStringConvertible {
   case existingAccount
   case workouts
   case plans
-  case account
+  case me
 
   var description: String {
     switch self {
@@ -25,7 +25,7 @@ enum Copy: CustomStringConvertible {
     case .existingAccount: return "Already have an account? Log in"
     case .workouts: return "Workouts"
     case .plans: return "Plans"
-    case .account: return "Account"
+    case .me: return "Me"
     }
   }
 }

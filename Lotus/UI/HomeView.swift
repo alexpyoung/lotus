@@ -16,7 +16,7 @@ struct HomeView: View {
       Text("Another One")
         .tabItem {
           Image(systemName: "person.crop.circle")
-          Text(.account)
+          Text(.me)
       }
     }
     .font(.headline)
