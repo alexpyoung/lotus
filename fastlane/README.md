@@ -20,22 +20,22 @@ or alternatively using `brew cask install fastlane`
 ```
 fastlane ios install
 ```
-
+Install Cocoapods
 ### ios build
 ```
 fastlane ios build
 ```
-
+Compile
 ### ios test
 ```
 fastlane ios test
 ```
-
+Run unit and UI tests
 ### ios lint
 ```
 fastlane ios lint
 ```
-
+SwiftLint
 
 ----
 
