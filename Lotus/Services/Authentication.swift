@@ -133,9 +133,10 @@ class Authentication {
           let token = credentials.idToken,
           let jwt = try? decode(jwt: token),
           let auth0id = jwt.body["sub"] as? String
-          else {
-            return
+        else {
+          return
         }
+        print("DEBUG: JWT", token)
         print("DEBUG:", "Authenticated \(auth0id)")
         callback?(.success(auth0id: auth0id))
       case .failure(error: let error):
