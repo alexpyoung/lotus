@@ -1,4 +1,5 @@
 # Lotus
+![CI](https://github.com/alexpyoung/lotus/workflows/CI/badge.svg)
 
 ## Development
 ### Installation
