@@ -13,6 +13,9 @@ jobs:
       run: bundle install
     - name: Compile the app
       run: bundle exec fastlane ios build
+      env:
+        FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
   test:
     runs-on: macos-latest
     steps:
@@ -23,6 +26,9 @@ jobs:
       run: bundle install
     - name: Run tests
       run: bundle exec fastlane ios test
+      env:
+        FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
   lint:
     runs-on: macos-latest
     steps:
