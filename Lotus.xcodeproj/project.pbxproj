@@ -532,7 +532,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "yarn run download_gql_schema\nyarn run codegen_gql\n";
+			shellScript = "#yarn run download_gql_schema\nyarn run codegen_gql\n";
 		};
 		FA25DEF3241540DF008641AD /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
