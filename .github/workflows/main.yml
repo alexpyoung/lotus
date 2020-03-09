@@ -2,13 +2,12 @@ name: CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 jobs:
   test:
     runs-on: macos-latest
     steps:
-    - name: ls -hal ..
-      run: ls -hal ..
-    - name: ls -hal ./
-      run: ls -hal ./
+    - uses: actions/checkout@v2
+    - name: Install CI tools
+      run: bundle install
+    - name: Tests
+      run: bundle exec fastlane ios test
