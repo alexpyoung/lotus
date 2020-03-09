@@ -14,6 +14,7 @@ struct AuthenticationView: View {
   @State var password: String = ""
   @State var mode: AuthenticationMode = .signUp
   @State var isLoading: Bool = false
+  @State var error: Error?
   private var isEmpty: Bool {
     switch self.mode {
     case .logIn:
@@ -36,12 +37,31 @@ struct AuthenticationView: View {
   var passwordView: some View {
     Input(label: .password, value: self.$password, style: .secure)
   }
+  var errorView: some View {
+    guard let error = self.error else {
+      return AnyView(EmptyView())
+    }
+    return AnyView(
+      Text(error.localizedDescription)
+        .multilineTextAlignment(.leading)
+        .font(.system(.subheadline))
+        .foregroundColor(.red)
+    )
+  }
 
   private func reset(mode: AuthenticationMode) {
     self.name = ""
     self.email = ""
     self.password = ""
+    self.error = nil
     self.mode = mode
+  }
+
+  private func onAuthentication(result: Result) {
+    self.isLoading = false
+    if case let .failure(error) = result {
+      self.error = error
+    }
   }
 
   var content: some View {
@@ -52,12 +72,16 @@ struct AuthenticationView: View {
           .autocapitalization(.words)
         self.emailView
         self.passwordView
+        self.errorView
         FilledButton(title: .signup, isLoading: self.$isLoading) {
+          self.error = nil
           self.isLoading = true
-          Authentication.signUp(email: self.email, password: self.password, name: self.name) { result in
-            self.isLoading = false
-            print(result)
-          }
+          Authentication.signUp(
+            email: self.email,
+            password: self.password,
+            name: self.name,
+            callback: self.onAuthentication
+          )
         }
         .disabled(self.isEmpty, brightness: 0.2)
         .padding(.top, 16)
@@ -68,12 +92,11 @@ struct AuthenticationView: View {
       return AnyView(VStack {
         self.emailView
         self.passwordView
+        self.errorView
         FilledButton(title: .login, isLoading: self.$isLoading) {
+          self.error = nil
           self.isLoading = true
-          Authentication.logIn(email: self.email, password: self.password) { result in
-            self.isLoading = false
-            print(result)
-          }
+          Authentication.logIn(email: self.email, password: self.password, callback: self.onAuthentication)
         }
         .disabled(self.isEmpty, brightness: 0.2)
         .padding(.top, 16)
