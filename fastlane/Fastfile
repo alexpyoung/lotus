@@ -18,6 +18,7 @@ platform :ios do
       skip_package_ipa: true,
       output_directory: '.',
       derived_data_path: DERIVED_DATA_PATH,
+      export_xcargs: '-allowProvisioningUpdates',
     )
   end
 
