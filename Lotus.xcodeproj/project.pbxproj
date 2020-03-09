@@ -31,6 +31,9 @@
 		FA574D7924155D1D00EA1B97 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D7824155D1D00EA1B97 /* TextButton.swift */; };
 		FA574D7B2415628100EA1B97 /* Lotus+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D7A2415628100EA1B97 /* Lotus+SwiftUI.swift */; };
 		FA574D7D2415ACBE00EA1B97 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D7C2415ACBE00EA1B97 /* ActivityIndicator.swift */; };
+		FA574D842415CACA00EA1B97 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D832415CACA00EA1B97 /* Person.swift */; };
+		FA574D862415CB9800EA1B97 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D852415CB9800EA1B97 /* HomeView.swift */; };
+		FA574D882415CBC800EA1B97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D872415CBC800EA1B97 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		FA574D7824155D1D00EA1B97 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		FA574D7A2415628100EA1B97 /* Lotus+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lotus+SwiftUI.swift"; sourceTree = "<group>"; };
 		FA574D7C2415ACBE00EA1B97 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		FA574D832415CACA00EA1B97 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FA574D852415CB9800EA1B97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FA574D872415CBC800EA1B97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +171,7 @@
 		FA25DE8E24146B0E008641AD /* Lotus */ = {
 			isa = PBXGroup;
 			children = (
+				FA574D822415CAB700EA1B97 /* Objects */,
 				FA25DEDF24152524008641AD /* UI */,
 				FA25DECD24146EAF008641AD /* GraphQL */,
 				FA25DEDC24148A6F008641AD /* Services */,
@@ -230,8 +237,10 @@
 			isa = PBXGroup;
 			children = (
 				FA25DEE02415252D008641AD /* Library */,
+				FA574D852415CB9800EA1B97 /* HomeView.swift */,
 				FA25DE9324146B0E008641AD /* AuthenticationView.swift */,
 				FA25DEE324153145008641AD /* Copy.swift */,
+				FA574D872415CBC800EA1B97 /* RootView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -245,6 +254,14 @@
 				FA574D7C2415ACBE00EA1B97 /* ActivityIndicator.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		FA574D822415CAB700EA1B97 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FA574D832415CACA00EA1B97 /* Person.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */,
+				FA574D862415CB9800EA1B97 /* HomeView.swift in Sources */,
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DEE424153146008641AD /* Copy.swift in Sources */,
 				FA25DED2241470B4008641AD /* Operations.swift in Sources */,
@@ -537,9 +555,11 @@
 				FA25DEE224152556008641AD /* FilledButton.swift in Sources */,
 				FA574D7924155D1D00EA1B97 /* TextButton.swift in Sources */,
 				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
+				FA574D842415CACA00EA1B97 /* Person.swift in Sources */,
 				FA25DE9424146B0E008641AD /* AuthenticationView.swift in Sources */,
 				FA574D7B2415628100EA1B97 /* Lotus+SwiftUI.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
+				FA574D882415CBC800EA1B97 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

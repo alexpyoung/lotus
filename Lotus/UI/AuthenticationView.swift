@@ -9,12 +9,15 @@ enum AuthenticationMode {
 
 struct AuthenticationView: View {
 
+  @EnvironmentObject var person: Person
+
   @State var name: String = ""
   @State var email: String = ""
   @State var password: String = ""
   @State var mode: AuthenticationMode = .signUp
   @State var isLoading: Bool = false
   @State var error: Error?
+
   private var isEmpty: Bool {
     switch self.mode {
     case .logIn:
@@ -59,7 +62,12 @@ struct AuthenticationView: View {
 
   private func onAuthentication(result: Result) {
     self.isLoading = false
-    if case let .failure(error) = result {
+    switch result {
+    case .success(let auth0id):
+      DispatchQueue.main.async {
+        self.person.auth0id = auth0id
+      }
+    case .failure(let error):
       self.error = error
     }
   }

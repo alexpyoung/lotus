@@ -13,7 +13,7 @@ enum DecodeError: Error {
 }
 
 enum Result {
-  case success
+  case success(auth0id: String)
   case failure(error: Error)
 }
 
@@ -106,6 +106,7 @@ class Authentication {
                   return
                 }
                 print("DEBUG:", "Person created", personId)
+                callback?(.success(auth0id: auth0id))
               case .failure(let error):
                 callback?(.failure(error: error))
               }
@@ -136,7 +137,7 @@ class Authentication {
             return
         }
         print("DEBUG:", "Authenticated \(auth0id)")
-        callback?(.success)
+        callback?(.success(auth0id: auth0id))
       case .failure(error: let error):
         callback?(.failure(error: error))
       }

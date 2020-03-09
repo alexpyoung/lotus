@@ -2,6 +2,7 @@ import Apollo
 
 private struct Config: Codable {
   var apiUrl: String
+  var adminSecret: String
 }
 
 class Network {
@@ -36,16 +37,21 @@ class Network {
 }
 
 extension Network: HTTPNetworkTransportPreflightDelegate {
+
   func networkTransport(_ networkTransport: HTTPNetworkTransport, shouldSend request: URLRequest) -> Bool {
     Authentication.shared.jwt != nil
   }
 
   func networkTransport(_ networkTransport: HTTPNetworkTransport, willSend request: inout URLRequest) {
-    guard let token = Authentication.shared.jwt else {
+    guard
+      let token = Authentication.shared.jwt,
+      let secret = self.config?.adminSecret
+    else {
       return
     }
     var headers = request.allHTTPHeaderFields ?? [String: String]()
     headers["Authorization"] = "Bearer \(token)"
+    headers["x-hasura-admin-secret"] = secret
     request.allHTTPHeaderFields = headers
   }
 }
