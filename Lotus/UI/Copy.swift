@@ -3,6 +3,7 @@ enum Copy: CustomStringConvertible {
   case welcome
   case login
   case signup
+  case logout
   case email
   case password
   case name
@@ -19,6 +20,7 @@ enum Copy: CustomStringConvertible {
     case .welcome: return "Welcome!"
     case .login: return "Log In"
     case .signup: return "Sign Up"
+    case .logout: return "Log Out"
     case .email: return "Email"
     case .password: return "Password"
     case .name: return "Name"

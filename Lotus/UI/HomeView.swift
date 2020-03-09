@@ -13,7 +13,7 @@ struct HomeView: View {
           Image(systemName: "tray.full")
           Text(.plans)
       }
-      Text("Another One")
+      ProfileView()
         .tabItem {
           Image(systemName: "person.crop.circle")
           Text(.me)
