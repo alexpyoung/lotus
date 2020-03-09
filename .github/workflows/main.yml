@@ -33,7 +33,5 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install Fastlane
-      run: bundle install
     - name: Run SwiftLint
-      run: bundle exec fastlane ios lint
+      run: Pods/SwiftLint/swiftlint --strict
