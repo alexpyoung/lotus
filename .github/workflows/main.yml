@@ -7,11 +7,8 @@ on:
 jobs:
   test:
     runs-on: macos-latest
-    strategy:
-        matrix:
-          destination: ['platform=iOS Simulator,OS=13.3,name=iPhone Xs Max']
     steps:
-    - name: Test
-      run: |
-        pwd && ls
-        bundle exec fastlane ios test
+    - name: ls -hal ..
+      run: ls -hal ..
+    - name: ls -hal ./
+      run: ls -hal ./
