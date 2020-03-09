@@ -17,9 +17,7 @@ platform :ios do
       skip_archive: true,
       skip_package_ipa: true,
       skip_codesigning: true,
-      output_directory: '.',
       derived_data_path: DERIVED_DATA_PATH,
-      xcargs: '-allowProvisioningUpdates',
     )
   end
 
@@ -28,7 +26,6 @@ platform :ios do
     run_tests(
       include_simulator_logs: false,
       derived_data_path: DERIVED_DATA_PATH,
-      xcargs: '-allowProvisioningUpdates',
     )
   end
 
