@@ -19,7 +19,7 @@ enum Result {
   case failure(error: Error)
 }
 
-class Authentication {
+final class Authentication {
 
   static let shared = Authentication()
   private(set) var jwt: String?

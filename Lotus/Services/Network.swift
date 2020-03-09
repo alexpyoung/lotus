@@ -5,7 +5,7 @@ private struct Config: Codable {
   var adminSecret: String
 }
 
-class Network {
+final class Network {
 
   static let shared = Network()
   private lazy var config: Config? = {
