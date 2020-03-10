@@ -17,6 +17,14 @@ extension Color {
   static let aqua = Color(red: 136/255, green: 225/255, blue: 242/255)
 }
 
+extension UIColor {
+
+  static let navy = UIColor(red: 33/255, green: 36/255, blue: 61/255, alpha: 1)
+  static let salmon = UIColor(red: 1, green: 124/255, blue: 124/255, alpha: 1)
+  static let mustard = UIColor(red: 1, green: 208/255, blue: 130/255, alpha: 1)
+  static let aqua = UIColor(red: 136/255, green: 225/255, blue: 242/255, alpha: 1)
+}
+
 extension View {
 
   @inlinable func disabled(_ disabled: Bool, brightness: Double) -> some View {
