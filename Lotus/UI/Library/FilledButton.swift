@@ -8,12 +8,12 @@ struct FilledButton: View {
 
   var content: some View {
     self.isLoading
-      ? AnyView(ActivityIndicator(
+      ? ActivityIndicator(
         isAnimating: .constant(true),
         color: .white,
         style: .medium
-      ))
-      : AnyView(Text(self.title.description).fontWeight(.bold))
+      ).any
+      : Text(self.title.description).fontWeight(.bold).any
   }
 
   var body: some View {

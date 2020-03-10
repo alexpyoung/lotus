@@ -18,4 +18,8 @@ extension View {
   @inlinable func disabled(_ disabled: Bool, brightness: Double) -> some View {
     self.disabled(disabled).brightness(disabled ? brightness : 0)
   }
+
+  var any: AnyView {
+    return AnyView(self)
+  }
 }

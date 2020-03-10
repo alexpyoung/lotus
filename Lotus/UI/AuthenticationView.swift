@@ -42,14 +42,13 @@ struct AuthenticationView: View {
   }
   var errorView: some View {
     guard let error = self.error else {
-      return AnyView(EmptyView())
+      return EmptyView().any
     }
-    return AnyView(
-      Text(error.localizedDescription)
-        .multilineTextAlignment(.leading)
-        .font(.system(.subheadline))
-        .foregroundColor(.red)
-    )
+    return Text(error.localizedDescription)
+      .multilineTextAlignment(.leading)
+      .font(.system(.subheadline))
+      .foregroundColor(.red)
+      .any
   }
 
   private func reset(mode: AuthenticationMode) {
@@ -76,7 +75,7 @@ struct AuthenticationView: View {
   var content: some View {
     switch self.mode {
     case .signUp:
-      return AnyView(VStack {
+      return VStack {
         Input(label: .name, value: self.$name, style: .plaintext)
           .autocapitalization(.words)
         self.emailView
@@ -96,9 +95,9 @@ struct AuthenticationView: View {
         .padding(.top, 16)
         TextButton(title: .existingAccount, style: .subheadline) { self.reset(mode: .logIn) }
           .disabled(self.isLoading, brightness: 0.2)
-      })
+      }.any
     case .logIn:
-      return AnyView(VStack {
+      return VStack {
         self.emailView
         self.passwordView
         self.errorView
@@ -111,7 +110,7 @@ struct AuthenticationView: View {
         .padding(.top, 16)
         TextButton(title: .newAccount, style: .subheadline) { self.reset(mode: .signUp) }
           .disabled(self.isLoading, brightness: 0.2)
-      })
+      }.any
     }
   }
 

@@ -6,9 +6,9 @@ struct RootView: View {
 
   var body: some View {
     if self.person.id == nil && self.person.auth0id == nil {
-      return AnyView(AuthenticationView())
+      return AuthenticationView().any
     }
-    return AnyView(HomeView())
+    return HomeView().any
   }
 }
 

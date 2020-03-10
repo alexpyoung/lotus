@@ -7,16 +7,16 @@ struct PlanListView: View {
   var body: some View {
     switch self.query.state {
     case .loading:
-      return AnyView(ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large))
+      return ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large).any
     case .success(let result):
       let plans = result.users.flatMap({
         $0.person.groups.flatMap({
           $0.activityPlans.compactMap({ $0.plan })
         })
       })
-      return AnyView(List(plans, id: \.id) { Text($0.name) })
+      return List(plans, id: \.id) { Text($0.name) }.any
     case .error:
-      return AnyView(EmptyView()) // TODO
+      return EmptyView().any // TODO
     }
   }
 }

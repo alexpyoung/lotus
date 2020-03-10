@@ -7,7 +7,7 @@ struct WorkoutListView: View {
   var body: some View {
     switch self.query.state {
     case .loading:
-      return AnyView(ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large))
+      return ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large).any
     case .success(let result):
       let activities = result.users.flatMap({
         $0.person.groups.flatMap({
@@ -16,9 +16,9 @@ struct WorkoutListView: View {
             .flatMap({ $0.activities })
         })
       })
-      return AnyView(List(activities, id: \.id) { Text($0.createdAt) })
+      return List(activities, id: \.id) { Text($0.createdAt) }.any
     case .error:
-      return AnyView(EmptyView()) // TODO
+      return EmptyView().any // TODO
     }
   }
 }

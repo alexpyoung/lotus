@@ -14,9 +14,9 @@ struct Input: View {
   var field: some View {
     switch self.style {
     case .plaintext:
-      return AnyView(TextField(self.label.description, text: self.$value))
+      return TextField(self.label.description, text: self.$value).any
     case .secure:
-      return AnyView(SecureField(self.label.description, text: self.$value))
+      return SecureField(self.label.description, text: self.$value).any
     }
   }
 
