@@ -2,20 +2,24 @@ import SwiftUI
 
 struct WorkoutListView: View {
 
-  @ObservedObject var plansQuery = ObservableQuery<MyActivitiesQuery>()
+  @ObservedObject private var query = ObservableQuery<MyActivitiesQuery>()
 
   var body: some View {
-    guard let result = self.plansQuery.value else {
+    switch self.query.state {
+    case .loading:
       return AnyView(ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large))
-    }
-    let activities = result.users.flatMap({
-      $0.person.groups.flatMap({
-        $0.activityPlans
-          .compactMap({ $0.plan })
-          .flatMap({ $0.activities })
+    case .success(let result):
+      let activities = result.users.flatMap({
+        $0.person.groups.flatMap({
+          $0.activityPlans
+            .compactMap({ $0.plan })
+            .flatMap({ $0.activities })
+        })
       })
-    })
-    return AnyView(List(activities, id: \.id) { Text($0.createdAt) })
+      return AnyView(List(activities, id: \.id) { Text($0.createdAt) })
+    case .error:
+      return AnyView(EmptyView()) // TODO
+    }
   }
 }
 
