@@ -37,6 +37,7 @@
 		FA7B752F2415D3B600B9C1E0 /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */; };
 		FABFC7DA2415E91F003DA7FA /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC7D92415E91F003DA7FA /* Loading.swift */; };
 		FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5473E2416FAE500249923 /* ProfileView.swift */; };
+		FAF54741241700F700249923 /* ObservableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54740241700F700249923 /* ObservableQuery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
 		FABFC7D92415E91F003DA7FA /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		FAF5473E2416FAE500249923 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAF54740241700F700249923 /* ObservableQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableQuery.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 				FA25DED724147391008641AD /* Queries.gql */,
 				FA25DECE24146F5D008641AD /* Mutations.gql */,
 				FA25DED1241470B4008641AD /* Operations.swift */,
+				FAF54740241700F700249923 /* ObservableQuery.swift */,
 			);
 			path = GraphQL;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				FA25DED42414715A008641AD /* Network.swift in Sources */,
 				FA25DEE224152556008641AD /* FilledButton.swift in Sources */,
 				FA574D7924155D1D00EA1B97 /* TextButton.swift in Sources */,
+				FAF54741241700F700249923 /* ObservableQuery.swift in Sources */,
 				FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */,
 				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
 				FA574D842415CACA00EA1B97 /* Person.swift in Sources */,
