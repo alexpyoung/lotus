@@ -63,9 +63,10 @@ struct AuthenticationView: View {
   private func onAuthentication(result: Result) {
     self.isLoading = false
     switch result {
-    case .success(let auth0id):
+    case let .success(auth0id, personId):
       DispatchQueue.main.async {
         self.person.auth0id = auth0id
+        self.person.id = personId
       }
     case .failure(let error):
       self.error = error

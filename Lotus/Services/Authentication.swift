@@ -15,7 +15,7 @@ enum AuthenticationError: Error {
 }
 
 enum Result {
-  case success(auth0id: String)
+  case success(auth0id: String, personId: String?)
   case failure(error: Error)
 }
 
@@ -126,7 +126,7 @@ final class Authentication {
                   return
                 }
                 print("DEBUG:", "Person created", personId)
-                callback?(.success(auth0id: auth0id))
+                callback?(.success(auth0id: auth0id, personId: personId))
               case .failure(let error):
                 callback?(.failure(error: error))
               }
@@ -158,7 +158,7 @@ final class Authentication {
         }
         print("DEBUG: JWT", token)
         print("DEBUG:", "Authenticated \(auth0id)")
-        callback?(.success(auth0id: auth0id))
+        callback?(.success(auth0id: auth0id, personId: nil))
       case .failure(error: let error):
         callback?(.failure(error: error))
       }
