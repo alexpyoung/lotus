@@ -1,7 +1,10 @@
 query MyActivityPlans($auth0id: String!) {
   users(where: {auth0_id: {_eq: $auth0id}}) {
+    auth0_id
     person {
+      id
       groups {
+        id
         activity_plans {
           plan {
             id

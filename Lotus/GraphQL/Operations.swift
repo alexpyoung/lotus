@@ -237,10 +237,13 @@ public final class MyActivityPlansQuery: GraphQLQuery {
     query MyActivityPlans($auth0id: String!) {
       users(where: {auth0_id: {_eq: $auth0id}}) {
         __typename
+        auth0_id
         person {
           __typename
+          id
           groups {
             __typename
+            id
             activity_plans {
               __typename
               plan {
@@ -299,6 +302,7 @@ public final class MyActivityPlansQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("auth0_id", type: .nonNull(.scalar(String.self))),
         GraphQLField("person", type: .nonNull(.object(Person.selections))),
       ]
 
@@ -308,8 +312,8 @@ public final class MyActivityPlansQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(person: Person) {
-        self.init(unsafeResultMap: ["__typename": "users", "person": person.resultMap])
+      public init(auth0Id: String, person: Person) {
+        self.init(unsafeResultMap: ["__typename": "users", "auth0_id": auth0Id, "person": person.resultMap])
       }
 
       public var __typename: String {
@@ -318,6 +322,15 @@ public final class MyActivityPlansQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var auth0Id: String {
+        get {
+          return resultMap["auth0_id"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "auth0_id")
         }
       }
 
@@ -336,6 +349,7 @@ public final class MyActivityPlansQuery: GraphQLQuery {
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(String.self))),
           GraphQLField("groups", type: .nonNull(.list(.nonNull(.object(Group.selections))))),
         ]
 
@@ -345,8 +359,8 @@ public final class MyActivityPlansQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(groups: [Group]) {
-          self.init(unsafeResultMap: ["__typename": "persons", "groups": groups.map { (value: Group) -> ResultMap in value.resultMap }])
+        public init(id: String, groups: [Group]) {
+          self.init(unsafeResultMap: ["__typename": "persons", "id": id, "groups": groups.map { (value: Group) -> ResultMap in value.resultMap }])
         }
 
         public var __typename: String {
@@ -355,6 +369,15 @@ public final class MyActivityPlansQuery: GraphQLQuery {
           }
           set {
             resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: String {
+          get {
+            return resultMap["id"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
           }
         }
 
@@ -373,6 +396,7 @@ public final class MyActivityPlansQuery: GraphQLQuery {
 
           public static let selections: [GraphQLSelection] = [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .nonNull(.scalar(String.self))),
             GraphQLField("activity_plans", type: .nonNull(.list(.nonNull(.object(ActivityPlan.selections))))),
           ]
 
@@ -382,8 +406,8 @@ public final class MyActivityPlansQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(activityPlans: [ActivityPlan]) {
-            self.init(unsafeResultMap: ["__typename": "groups", "activity_plans": activityPlans.map { (value: ActivityPlan) -> ResultMap in value.resultMap }])
+          public init(id: String, activityPlans: [ActivityPlan]) {
+            self.init(unsafeResultMap: ["__typename": "groups", "id": id, "activity_plans": activityPlans.map { (value: ActivityPlan) -> ResultMap in value.resultMap }])
           }
 
           public var __typename: String {
@@ -392,6 +416,15 @@ public final class MyActivityPlansQuery: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: String {
+            get {
+              return resultMap["id"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
             }
           }
 
