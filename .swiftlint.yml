@@ -3,5 +3,5 @@ excluded:
   - Lotus/GraphQL/Operations.swift
 
 disabled_rules:
-  - trailing_comma
   - todo
+  - trailing_comma
