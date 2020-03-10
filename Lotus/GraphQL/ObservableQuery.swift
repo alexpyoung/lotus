@@ -30,3 +30,4 @@ protocol AuthenticatableQuery: GraphQLQuery {
 }
 
 extension MyActivityPlansQuery: AuthenticatableQuery {}
+extension MyActivitiesQuery: AuthenticatableQuery {}
