@@ -15,8 +15,8 @@ struct PlanListView: View {
         })
       })
       return List(plans, id: \.id) { Text($0.name) }.any
-    case .error:
-      return EmptyView().any // TODO
+    case .error(let error):
+      return ErrorView(error).any
     }
   }
 }

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
+
   var body: some View {
     TabView {
       WorkoutListView()
@@ -19,7 +20,6 @@ struct HomeView: View {
           Text(.me)
       }
     }
-    .font(.headline)
   }
 }
 

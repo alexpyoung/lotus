@@ -21,7 +21,7 @@ struct FilledButton: View {
       self.content
         .frame(maxWidth: .infinity)
         .padding(.vertical, 16)
-        .background(Color.blue)
+        .background(Color.salmon)
         .foregroundColor(Color.white)
         .cornerRadius(6)
     }

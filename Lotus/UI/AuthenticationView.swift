@@ -122,7 +122,6 @@ struct AuthenticationView: View {
         .foregroundColor(.offBlack)
       self.content
     }
-    .padding(.vertical, 12)
     .padding(.horizontal, 24)
   }
 }

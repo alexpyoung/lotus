@@ -36,6 +36,7 @@
 		FA574D882415CBC800EA1B97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D872415CBC800EA1B97 /* RootView.swift */; };
 		FA7B752F2415D3B600B9C1E0 /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */; };
 		FA9242422417150B00B2F8B9 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9242412417150B00B2F8B9 /* WorkoutListView.swift */; };
+		FA9F8F3F241736B7003D135C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F8F3E241736B7003D135C /* ErrorView.swift */; };
 		FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5473E2416FAE500249923 /* ProfileView.swift */; };
 		FAF54741241700F700249923 /* ObservableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54740241700F700249923 /* ObservableQuery.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		FA574D872415CBC800EA1B97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
 		FA9242412417150B00B2F8B9 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		FA9F8F3E241736B7003D135C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FAF5473E2416FAE500249923 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FAF54740241700F700249923 /* ObservableQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableQuery.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +266,7 @@
 				FA25DEE124152556008641AD /* FilledButton.swift */,
 				FA25DEF1241534F4008641AD /* Input.swift */,
 				FA574D7824155D1D00EA1B97 /* TextButton.swift */,
+				FA9F8F3E241736B7003D135C /* ErrorView.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
 				FA574D842415CACA00EA1B97 /* Person.swift in Sources */,
 				FA25DE9424146B0E008641AD /* AuthenticationView.swift in Sources */,
+				FA9F8F3F241736B7003D135C /* ErrorView.swift in Sources */,
 				FA574D7B2415628100EA1B97 /* Lotus+SwiftUI.swift in Sources */,
 				FA25DEDE24148A7C008641AD /* Authentication.swift in Sources */,
 				FA574D882415CBC800EA1B97 /* RootView.swift in Sources */,

@@ -13,6 +13,8 @@ enum Copy: CustomStringConvertible {
   case plans
   // swiftlint:disable identifier_name
   case me
+  case errorTitle
+  case errorSubtitle
 
   var description: String {
     switch self {
@@ -29,6 +31,8 @@ enum Copy: CustomStringConvertible {
     case .workouts: return "Workouts"
     case .plans: return "Plans"
     case .me: return "Me"
+    case .errorTitle: return "Oops!"
+    case .errorSubtitle: return "Something went wrong..."
     }
   }
 }

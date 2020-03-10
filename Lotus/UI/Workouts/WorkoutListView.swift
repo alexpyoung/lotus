@@ -17,8 +17,8 @@ struct WorkoutListView: View {
         })
       })
       return List(activities, id: \.id) { Text($0.createdAt) }.any
-    case .error:
-      return EmptyView().any // TODO
+    case .error(let error):
+      return ErrorView(error).any
     }
   }
 }
