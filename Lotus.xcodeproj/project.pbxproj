@@ -35,7 +35,6 @@
 		FA574D862415CB9800EA1B97 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D852415CB9800EA1B97 /* HomeView.swift */; };
 		FA574D882415CBC800EA1B97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D872415CBC800EA1B97 /* RootView.swift */; };
 		FA7B752F2415D3B600B9C1E0 /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */; };
-		FABFC7DA2415E91F003DA7FA /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFC7D92415E91F003DA7FA /* Loading.swift */; };
 		FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5473E2416FAE500249923 /* ProfileView.swift */; };
 		FAF54741241700F700249923 /* ObservableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54740241700F700249923 /* ObservableQuery.swift */; };
 /* End PBXBuildFile section */
@@ -97,7 +96,6 @@
 		FA574D852415CB9800EA1B97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA574D872415CBC800EA1B97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
-		FABFC7D92415E91F003DA7FA /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		FAF5473E2416FAE500249923 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FAF54740241700F700249923 /* ObservableQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableQuery.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,7 +260,6 @@
 				FA574D7C2415ACBE00EA1B97 /* ActivityIndicator.swift */,
 				FA25DEE124152556008641AD /* FilledButton.swift */,
 				FA25DEF1241534F4008641AD /* Input.swift */,
-				FABFC7D92415E91F003DA7FA /* Loading.swift */,
 				FA574D7824155D1D00EA1B97 /* TextButton.swift */,
 			);
 			path = Library;
@@ -566,7 +563,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA25DE9024146B0E008641AD /* AppDelegate.swift in Sources */,
-				FABFC7DA2415E91F003DA7FA /* Loading.swift in Sources */,
 				FA574D862415CB9800EA1B97 /* HomeView.swift in Sources */,
 				FA25DE9224146B0E008641AD /* SceneDelegate.swift in Sources */,
 				FA25DEE424153146008641AD /* Copy.swift in Sources */,

@@ -4,38 +4,18 @@ private typealias Plan = MyActivityPlansQuery.Data.User.Person.Group.ActivityPla
 
 struct PlanListView: View {
 
-  @EnvironmentObject var person: Person
-  @State private var plans: [String] = []
-  @State private var isLoading: Bool = true
+  @ObservedObject var plansQuery = ObservableQuery<MyActivityPlansQuery>()
 
   var body: some View {
-    guard let auth0id = self.person.auth0id else {
-      return AnyView(EmptyView())
+    guard let result = self.plansQuery.value else {
+      return AnyView(ActivityIndicator(isAnimating: .constant(false), color: .gray, style: .large))
     }
-    return AnyView(Loading(
-      isLoading: self.$isLoading,
-      action: {
-        Network.shared.apollo.fetch(query: MyActivityPlansQuery(auth0id: auth0id)) {
-          self.isLoading = false
-          switch $0 {
-          case .success(let result):
-            if let plans = result.data.flatMap({
-              $0.users.flatMap({
-                $0.person.groups.flatMap({ $0.activityPlans.compactMap({ $0.plan.flatMap({ $0.name })}) })
-              })
-            }) {
-              print(plans)
-              self.plans = plans
-            }
-          case .failure(let error):
-            print(error)
-          }
-        }
-      },
-      content: {
-        Text("\(self.plans.first ?? "Whoops")")
-      }
-    ))
+    let plans = result.users.flatMap({
+      $0.person.groups.flatMap({
+        $0.activityPlans.compactMap({ $0.plan })
+      })
+    })
+    return AnyView(List(plans, id: \.id) { Text($0.name) })
   }
 }
 
