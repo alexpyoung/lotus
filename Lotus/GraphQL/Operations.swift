@@ -230,6 +230,200 @@ public final class SignUpMutation: GraphQLMutation {
   }
 }
 
+public final class MeQuery: GraphQLQuery {
+  /// The raw GraphQL definition of this operation.
+  public let operationDefinition: String =
+    """
+    query Me($auth0id: String!) {
+      users(where: {auth0_id: {_eq: $auth0id}}) {
+        __typename
+        auth0_id
+        person {
+          __typename
+          id
+          groups {
+            __typename
+            id
+          }
+        }
+      }
+    }
+    """
+
+  public let operationName: String = "Me"
+
+  public var auth0id: String
+
+  public init(auth0id: String) {
+    self.auth0id = auth0id
+  }
+
+  public var variables: GraphQLMap? {
+    return ["auth0id": auth0id]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes: [String] = ["query_root"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("users", arguments: ["where": ["auth0_id": ["_eq": GraphQLVariable("auth0id")]]], type: .nonNull(.list(.nonNull(.object(User.selections))))),
+    ]
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(users: [User]) {
+      self.init(unsafeResultMap: ["__typename": "query_root", "users": users.map { (value: User) -> ResultMap in value.resultMap }])
+    }
+
+    /// fetch data from the table: "users"
+    public var users: [User] {
+      get {
+        return (resultMap["users"] as! [ResultMap]).map { (value: ResultMap) -> User in User(unsafeResultMap: value) }
+      }
+      set {
+        resultMap.updateValue(newValue.map { (value: User) -> ResultMap in value.resultMap }, forKey: "users")
+      }
+    }
+
+    public struct User: GraphQLSelectionSet {
+      public static let possibleTypes: [String] = ["users"]
+
+      public static let selections: [GraphQLSelection] = [
+        GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("auth0_id", type: .nonNull(.scalar(String.self))),
+        GraphQLField("person", type: .nonNull(.object(Person.selections))),
+      ]
+
+      public private(set) var resultMap: ResultMap
+
+      public init(unsafeResultMap: ResultMap) {
+        self.resultMap = unsafeResultMap
+      }
+
+      public init(auth0Id: String, person: Person) {
+        self.init(unsafeResultMap: ["__typename": "users", "auth0_id": auth0Id, "person": person.resultMap])
+      }
+
+      public var __typename: String {
+        get {
+          return resultMap["__typename"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var auth0Id: String {
+        get {
+          return resultMap["auth0_id"]! as! String
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "auth0_id")
+        }
+      }
+
+      /// An object relationship
+      public var person: Person {
+        get {
+          return Person(unsafeResultMap: resultMap["person"]! as! ResultMap)
+        }
+        set {
+          resultMap.updateValue(newValue.resultMap, forKey: "person")
+        }
+      }
+
+      public struct Person: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["persons"]
+
+        public static let selections: [GraphQLSelection] = [
+          GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("id", type: .nonNull(.scalar(String.self))),
+          GraphQLField("groups", type: .nonNull(.list(.nonNull(.object(Group.selections))))),
+        ]
+
+        public private(set) var resultMap: ResultMap
+
+        public init(unsafeResultMap: ResultMap) {
+          self.resultMap = unsafeResultMap
+        }
+
+        public init(id: String, groups: [Group]) {
+          self.init(unsafeResultMap: ["__typename": "persons", "id": id, "groups": groups.map { (value: Group) -> ResultMap in value.resultMap }])
+        }
+
+        public var __typename: String {
+          get {
+            return resultMap["__typename"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var id: String {
+          get {
+            return resultMap["id"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "id")
+          }
+        }
+
+        /// An array relationship
+        public var groups: [Group] {
+          get {
+            return (resultMap["groups"] as! [ResultMap]).map { (value: ResultMap) -> Group in Group(unsafeResultMap: value) }
+          }
+          set {
+            resultMap.updateValue(newValue.map { (value: Group) -> ResultMap in value.resultMap }, forKey: "groups")
+          }
+        }
+
+        public struct Group: GraphQLSelectionSet {
+          public static let possibleTypes: [String] = ["groups"]
+
+          public static let selections: [GraphQLSelection] = [
+            GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+            GraphQLField("id", type: .nonNull(.scalar(String.self))),
+          ]
+
+          public private(set) var resultMap: ResultMap
+
+          public init(unsafeResultMap: ResultMap) {
+            self.resultMap = unsafeResultMap
+          }
+
+          public init(id: String) {
+            self.init(unsafeResultMap: ["__typename": "groups", "id": id])
+          }
+
+          public var __typename: String {
+            get {
+              return resultMap["__typename"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "__typename")
+            }
+          }
+
+          public var id: String {
+            get {
+              return resultMap["id"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "id")
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 public final class MyActivityPlansQuery: GraphQLQuery {
   /// The raw GraphQL definition of this operation.
   public let operationDefinition: String =

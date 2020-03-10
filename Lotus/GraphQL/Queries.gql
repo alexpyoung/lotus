@@ -1,3 +1,16 @@
+query Me($auth0id: String!) {
+  users(where: {auth0_id: {_eq: $auth0id}}) {
+    auth0_id
+    person {
+      id
+      groups {
+        id
+      }
+    }
+  }
+}
+
+
 query MyActivityPlans($auth0id: String!) {
   users(where: {auth0_id: {_eq: $auth0id}}) {
     auth0_id
