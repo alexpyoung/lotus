@@ -12,6 +12,7 @@ private struct Config: Codable {
 enum AuthenticationError: Error {
   case plistConfiguration
   case jwtPersistence
+  case jwtNotFound
 }
 
 enum Result {
