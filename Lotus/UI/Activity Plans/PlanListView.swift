@@ -1,7 +1,5 @@
 import SwiftUI
 
-private typealias Plan = MyActivityPlansQuery.Data.User.Person.Group.ActivityPlan
-
 struct PlanListView: View {
 
   @ObservedObject var plansQuery = ObservableQuery<MyActivityPlansQuery>()

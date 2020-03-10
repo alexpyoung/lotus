@@ -35,6 +35,7 @@
 		FA574D862415CB9800EA1B97 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D852415CB9800EA1B97 /* HomeView.swift */; };
 		FA574D882415CBC800EA1B97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA574D872415CBC800EA1B97 /* RootView.swift */; };
 		FA7B752F2415D3B600B9C1E0 /* PlanListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */; };
+		FA9242422417150B00B2F8B9 /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9242412417150B00B2F8B9 /* WorkoutListView.swift */; };
 		FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF5473E2416FAE500249923 /* ProfileView.swift */; };
 		FAF54741241700F700249923 /* ObservableQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF54740241700F700249923 /* ObservableQuery.swift */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,7 @@
 		FA574D852415CB9800EA1B97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA574D872415CBC800EA1B97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanListView.swift; sourceTree = "<group>"; };
+		FA9242412417150B00B2F8B9 /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
 		FAF5473E2416FAE500249923 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FAF54740241700F700249923 /* ObservableQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableQuery.swift; sourceTree = "<group>"; };
 		FB072D4BACA951678F008432 /* Pods_Lotus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +244,7 @@
 		FA25DEDF24152524008641AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FA924240241714FB00B2F8B9 /* Workouts */,
 				FA25DEE02415252D008641AD /* Library */,
 				FA7B75302415D3C800B9C1E0 /* Activity Plans */,
 				FA574D872415CBC800EA1B97 /* RootView.swift */,
@@ -279,6 +282,14 @@
 				FA7B752E2415D3B600B9C1E0 /* PlanListView.swift */,
 			);
 			path = "Activity Plans";
+			sourceTree = "<group>";
+		};
+		FA924240241714FB00B2F8B9 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				FA9242412417150B00B2F8B9 /* WorkoutListView.swift */,
+			);
+			path = Workouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +583,7 @@
 				FA25DEE224152556008641AD /* FilledButton.swift in Sources */,
 				FA574D7924155D1D00EA1B97 /* TextButton.swift in Sources */,
 				FAF54741241700F700249923 /* ObservableQuery.swift in Sources */,
+				FA9242422417150B00B2F8B9 /* WorkoutListView.swift in Sources */,
 				FAF5473F2416FAE500249923 /* ProfileView.swift in Sources */,
 				FA25DEF2241534F4008641AD /* Input.swift in Sources */,
 				FA574D842415CACA00EA1B97 /* Person.swift in Sources */,

@@ -3,7 +3,7 @@ import SwiftUI
 struct HomeView: View {
   var body: some View {
     TabView {
-      Text("The First Tab")
+      WorkoutListView()
         .tabItem {
           Image(systemName: "sun.haze.fill")
           Text(.workouts)
