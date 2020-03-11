@@ -1,4 +1,6 @@
+import Apollo
 import Auth0
+import Combine
 import JWTDecode
 import SwiftKeychainWrapper
 
@@ -13,11 +15,12 @@ enum AuthenticationError: Error {
   case plistConfiguration
   case jwtPersistence
   case jwtNotFound
+  case todo
 }
 
-enum Result {
-  case success(auth0id: String, personId: String?)
-  case failure(error: Error)
+struct Identifiers {
+  let auth0Id: String
+  let personId: String
 }
 
 final class Authentication {
@@ -45,39 +48,40 @@ final class Authentication {
     return config
   }()
 
-  private static func createUser(
-    email: String,
-    password: String,
-    callback: @escaping (Auth0.Result<DatabaseUser>) -> Void
-  ) {
-    Auth0
-      .authentication()
-      .createUser(
-        email: email,
-        password: password,
-        connection: "Username-Password-Authentication"
+  private static func createUser( email: String, password: String) -> Future<DatabaseUser, Error> {
+    Future { promise in
+      Auth0
+        .authentication()
+        .createUser(
+          email: email,
+          password: password,
+          connection: "Username-Password-Authentication"
       )
-      .start(callback)
+      .start({
+        switch $0 {
+        case .success(let user):
+          return promise(.success(user))
+        case .failure(let error):
+          return promise(.failure(error))
+        }
+      })
+    }
   }
 
-  private static func authenticate(
-    email: String,
-    password: String,
-    callback: @escaping (Auth0.Result<Credentials>) -> Void
-  ) {
-    guard let domain = config?.Domain else {
-      callback(.failure(error: AuthenticationError.plistConfiguration))
-      return
-    }
-    Auth0
-      .authentication()
-      .login(
-        usernameOrEmail: email,
-        password: password,
-        realm: "Username-Password-Authentication",
-        audience: "https://\(domain)/userinfo",
-        scope: "openid profile",
-        parameters: nil
+  private static func authenticate(email: String, password: String) -> Future<Credentials, Error> {
+    Future { promise in
+      guard let domain = config?.Domain else {
+        return promise(.failure(AuthenticationError.plistConfiguration))
+      }
+      Auth0
+        .authentication()
+        .login(
+          usernameOrEmail: email,
+          password: password,
+          realm: "Username-Password-Authentication",
+          audience: "https://\(domain)/userinfo",
+          scope: "openid profile",
+          parameters: nil
       )
       .start({
         do {
@@ -91,78 +95,67 @@ final class Authentication {
               throw AuthenticationError.jwtPersistence
             }
             self.shared.decoded = try decode(jwt: token)
-          case .failure: break
+            return promise(.success(credentials))
+          case .failure(let error):
+            return promise(.failure(error))
           }
-          callback($0)
         } catch let error {
-          callback(.failure(error: error))
+          return promise(.failure(error))
         }
       })
+    }
   }
 
   static func signUp(
     email: String,
     password: String,
-    name: String,
-    callback: ((Result) -> Void)?
-  ) {
-    self.createUser(email: email, password: password) {
-      switch $0 {
-      case .success(let result):
-        print("DEBUG:", "User created", result)
-        self.authenticate(email: email, password: password) {
-          switch $0 {
-          case .success(let credentials):
-            print("DEBUG:", "Authenticated", credentials)
-            guard
-              let jwt = self.shared.decoded,
-              let auth0id = jwt.body["sub"] as? String
-              else {
-                return
-            }
-            Network.shared.apollo.perform(mutation: SignUpMutation(auth0id: auth0id, name: name)) {
-              switch $0 {
-              case .success(let result):
-                guard let personId = result.data?.insertUsers?.returning.map({ $0.person.id }).first else {
-                  return
-                }
-                print("DEBUG:", "Person created", personId)
-                callback?(.success(auth0id: auth0id, personId: personId))
-              case .failure(let error):
-                callback?(.failure(error: error))
-              }
-            }
-          case .failure(error: let error):
-            callback?(.failure(error: error))
-          }
-        }
-      case .failure(let error):
-        callback?(.failure(error: error))
-      }
-    }
-  }
-
-  static func logIn(
-    email: String,
-    password: String,
-    callback: ((Result) -> Void)?
-  ) {
-    self.authenticate(email: email, password: password) {
-      switch $0 {
-      case .success(result: let credentials):
+    name: String
+  ) -> AnyPublisher<Identifiers, Error> {
+    return self.createUser(email: email, password: password)
+      .flatMap { _ in self.authenticate(email: email, password: password) }
+      .tryMap { (credentials: Credentials) throws -> String in
         guard
           let token = credentials.idToken,
           let jwt = try? decode(jwt: token),
           let auth0id = jwt.body["sub"] as? String
         else {
-          return
+          throw AuthenticationError.todo
         }
-        print("DEBUG: JWT", token)
-        print("DEBUG:", "Authenticated \(auth0id)")
-        callback?(.success(auth0id: auth0id, personId: nil))
-      case .failure(error: let error):
-        callback?(.failure(error: error))
+        return auth0id
       }
+    .flatMap { Network.shared.apollo.perform(mutation: SignUpMutation(auth0id: $0, name: name)) }
+    .tryMap { (result: GraphQLResult<SignUpMutation.Data>) -> Identifiers in
+      guard
+        let personIds = result.data?.insertUsers?.returning.map({ ($0.auth0Id, $0.person.id) }),
+        personIds.count == 1,
+        let (auth0Id, personId) = personIds.first
+      else {
+        throw AuthenticationError.todo
+      }
+      return Identifiers(auth0Id: auth0Id, personId: personId)
     }
+    .eraseToAnyPublisher()
+  }
+
+  static func logIn(email: String, password: String) -> AnyPublisher<Identifiers, Error> {
+    self.authenticate(email: email, password: password)
+      .tryMap { (credentials: Credentials) -> String in
+        guard
+          let token = credentials.idToken,
+          let jwt = try? decode(jwt: token),
+          let auth0id = jwt.body["sub"] as? String
+        else {
+          throw AuthenticationError.todo
+        }
+        return auth0id
+      }
+      .flatMap { Network.shared.apollo.fetch(query: MeQuery(auth0id: $0)) }
+      .tryMap { (result: GraphQLResult<MeQuery.Data>) -> Identifiers in
+        guard let (auth0Id, personId) = result.data?.users.map({ ($0.auth0Id, $0.person.id) }).first else {
+          throw AuthenticationError.todo
+        }
+        return Identifiers(auth0Id: auth0Id, personId: personId)
+      }
+      .eraseToAnyPublisher()
   }
 }

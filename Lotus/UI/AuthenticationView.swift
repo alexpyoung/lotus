@@ -1,4 +1,5 @@
 import Auth0
+import Combine
 import JWTDecode
 import SwiftUI
 
@@ -17,6 +18,9 @@ struct AuthenticationView: View {
   @State var mode: AuthenticationMode = .signUp
   @State var isLoading: Bool = false
   @State var error: Error?
+
+  // TODO: Better way to handle this?
+  @State var cancellable: AnyCancellable?
 
   private var isEmpty: Bool {
     switch self.mode {
@@ -59,19 +63,6 @@ struct AuthenticationView: View {
     self.mode = mode
   }
 
-  private func onAuthentication(result: Result) {
-    self.isLoading = false
-    switch result {
-    case let .success(auth0id, personId):
-      DispatchQueue.main.async {
-        self.person.auth0id = auth0id
-        self.person.id = personId
-      }
-    case .failure(let error):
-      self.error = error
-    }
-  }
-
   var content: some View {
     switch self.mode {
     case .signUp:
@@ -84,12 +75,9 @@ struct AuthenticationView: View {
         FilledButton(title: .signup, isLoading: self.$isLoading) {
           self.error = nil
           self.isLoading = true
-          Authentication.signUp(
-            email: self.email,
-            password: self.password,
-            name: self.name,
-            callback: self.onAuthentication
-          )
+          self.cancellable = Authentication
+            .signUp(email: self.email, password: self.password, name: self.name)
+            .sink(self)
         }
         .disabled(self.isEmpty, brightness: 0.2)
         .padding(.top, 16)
@@ -104,7 +92,7 @@ struct AuthenticationView: View {
         FilledButton(title: .login, isLoading: self.$isLoading) {
           self.error = nil
           self.isLoading = true
-          Authentication.logIn(email: self.email, password: self.password, callback: self.onAuthentication)
+          self.cancellable = Authentication.logIn(email: self.email, password: self.password).sink(self)
         }
         .disabled(self.isEmpty, brightness: 0.2)
         .padding(.top, 16)
@@ -123,6 +111,26 @@ struct AuthenticationView: View {
       self.content
     }
     .padding(.horizontal, 24)
+  }
+}
+
+extension AuthenticationView: Sink {
+
+  typealias Output = Identifiers
+  typealias Failure = Error
+
+  func value(output: Identifiers) {
+    self.isLoading = false
+    DispatchQueue.main.async {
+      self.person.auth0id = output.auth0Id
+      self.person.id = output.personId
+    }
+  }
+
+  func completion(completion: Subscribers.Completion<Error>) {
+    if case let .failure(error) = completion {
+      self.error = error
+    }
   }
 }
 
