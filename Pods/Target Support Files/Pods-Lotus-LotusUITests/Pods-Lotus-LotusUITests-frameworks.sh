@@ -212,24 +212,24 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework"
+  install_framework "${PODS_ROOT}/Apollo/Apollo.framework"
+  install_dsym "${PODS_ROOT}/Apollo/Apollo.framework.dSYM"
   install_framework "${PODS_ROOT}/Auth0/Auth0.framework"
   install_dsym "${PODS_ROOT}/Auth0/Auth0.framework.dSYM"
   install_framework "${PODS_ROOT}/JWTDecode/JWTDecode.framework"
   install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
-  install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
   install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
   install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
   install_framework "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
   install_dsym "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework.dSYM"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework"
+  install_framework "${PODS_ROOT}/Apollo/Apollo.framework"
+  install_dsym "${PODS_ROOT}/Apollo/Apollo.framework.dSYM"
   install_framework "${PODS_ROOT}/Auth0/Auth0.framework"
   install_dsym "${PODS_ROOT}/Auth0/Auth0.framework.dSYM"
   install_framework "${PODS_ROOT}/JWTDecode/JWTDecode.framework"
   install_dsym "${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM"
-  install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
   install_framework "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework"
   install_dsym "${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM"
   install_framework "${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework"
