@@ -1,10 +1,7 @@
-ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Apollo" "${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift" "${PODS_ROOT}/Auth0" "${PODS_ROOT}/JWTDecode" "${PODS_ROOT}/SimpleKeychain" "${PODS_ROOT}/SwiftKeychainWrapper"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Apollo" "${PODS_ROOT}/Auth0" "${PODS_ROOT}/JWTDecode" "${PODS_ROOT}/SQLite.swift" "${PODS_ROOT}/SimpleKeychain" "${PODS_ROOT}/SwiftKeychainWrapper"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Apollo/Apollo.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SQLite.swift/SQLite.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 OTHER_LDFLAGS = $(inherited) -l"sqlite3" -framework "Apollo" -framework "Auth0" -framework "JWTDecode" -framework "LocalAuthentication" -framework "SQLite" -framework "SafariServices" -framework "SimpleKeychain" -framework "SwiftKeychainWrapper" -framework "UIKit" -weak_framework "AuthenticationServices"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

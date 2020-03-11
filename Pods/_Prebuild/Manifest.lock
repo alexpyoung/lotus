@@ -1,32 +1,47 @@
 PODS:
+  - Apollo (0.23.2):
+    - Apollo/Core (= 0.23.2)
+  - Apollo/Core (0.23.2)
+  - Apollo/SQLite (0.23.2):
+    - Apollo/Core
+    - SQLite.swift (~> 0.12.2)
   - Auth0 (1.22.1):
     - JWTDecode
     - SimpleKeychain
   - JWTDecode (2.4.1)
   - SimpleKeychain (0.11.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
   - SwiftKeychainWrapper (3.4.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - Apollo (~> 0.23)
+  - Apollo/SQLite (~> 0.23)
   - Auth0 (~> 1.22)
   - SwiftKeychainWrapper (~> 3.4)
   - SwiftLint (~> 0.39)
 
 SPEC REPOS:
   trunk:
+    - Apollo
     - Auth0
     - JWTDecode
     - SimpleKeychain
+    - SQLite.swift
     - SwiftKeychainWrapper
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Apollo: 4dbc5912e866a505c6ab8992e721c7b6de201c70
   Auth0: c3dd0b6f9031e9cc38be2a6973f766f33ccbad83
   JWTDecode: 4bd4da0cdf0f8154fd467fa48499f34ec057fb88
   SimpleKeychain: 2c135c65e64cd4e7df7ec418407be83ee07ba1c2
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 4745f220dd43cfb180fe30709052198c45cfdc14
+PODFILE CHECKSUM: 1974eb10ccc48fded48f2c13bca9fd0d85e85acb
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.1

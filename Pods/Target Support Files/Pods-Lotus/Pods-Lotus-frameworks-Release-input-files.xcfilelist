@@ -1,10 +1,12 @@
 ${PODS_ROOT}/Target Support Files/Pods-Lotus/Pods-Lotus-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework
+${PODS_ROOT}/Apollo/Apollo.framework
+${PODS_ROOT}/Apollo/Apollo.framework.dSYM
 ${PODS_ROOT}/Auth0/Auth0.framework
 ${PODS_ROOT}/Auth0/Auth0.framework.dSYM
 ${PODS_ROOT}/JWTDecode/JWTDecode.framework
 ${PODS_ROOT}/JWTDecode/JWTDecode.framework.dSYM
-${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework
+${PODS_ROOT}/SQLite.swift/SQLite.framework
+${PODS_ROOT}/SQLite.swift/SQLite.framework.dSYM
 ${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework
 ${PODS_ROOT}/SimpleKeychain/SimpleKeychain.framework.dSYM
 ${PODS_ROOT}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework
