@@ -13,6 +13,7 @@ public final class SignUpMutation: GraphQLMutation {
         __typename
         returning {
           __typename
+          auth0_id
           person {
             __typename
             id
@@ -109,6 +110,7 @@ public final class SignUpMutation: GraphQLMutation {
 
         public static let selections: [GraphQLSelection] = [
           GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+          GraphQLField("auth0_id", type: .nonNull(.scalar(String.self))),
           GraphQLField("person", type: .nonNull(.object(Person.selections))),
         ]
 
@@ -118,8 +120,8 @@ public final class SignUpMutation: GraphQLMutation {
           self.resultMap = unsafeResultMap
         }
 
-        public init(person: Person) {
-          self.init(unsafeResultMap: ["__typename": "users", "person": person.resultMap])
+        public init(auth0Id: String, person: Person) {
+          self.init(unsafeResultMap: ["__typename": "users", "auth0_id": auth0Id, "person": person.resultMap])
         }
 
         public var __typename: String {
@@ -128,6 +130,15 @@ public final class SignUpMutation: GraphQLMutation {
           }
           set {
             resultMap.updateValue(newValue, forKey: "__typename")
+          }
+        }
+
+        public var auth0Id: String {
+          get {
+            return resultMap["auth0_id"]! as! String
+          }
+          set {
+            resultMap.updateValue(newValue, forKey: "auth0_id")
           }
         }
 
