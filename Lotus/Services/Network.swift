@@ -32,8 +32,19 @@ final class Network {
 
   private(set) lazy var apollo: ApolloClient! = {
     guard let transport = self.transport else { return nil }
-    return ApolloClient(networkTransport: transport)
+    return try? ApolloClient(transport: transport)
   }()
+}
+
+extension ApolloClient {
+
+  convenience init(transport: NetworkTransport) throws {
+    let fileURL = try FileManager.default
+      .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+      .appendingPathComponent("apollo.sqlite")
+    let cache = try SQLiteNormalizedCache(fileURL: fileURL)
+    self.init(networkTransport: transport, store: ApolloStore(cache: cache))
+  }
 }
 
 extension Network: HTTPNetworkTransportPreflightDelegate {
