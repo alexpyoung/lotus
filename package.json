@@ -1,8 +1,4 @@
 {
-  "name": "Lotus",
-  "version": "0.0.1",
-  "main": "index.js",
-  "author": "Alex Young <alexyoung1992@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "apollo": "^2.25.0"
