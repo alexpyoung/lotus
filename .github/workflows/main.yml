@@ -11,6 +11,8 @@ jobs:
       run: yarn install
     - name: Install Fastlane
       run: bundle install
+    - name: Configure build toolchain
+      run: sudo xcode-select --switch /Applications/Xcode_11.3.1.app
     - name: Compile the app
       run: bundle exec fastlane ios build
   test:
@@ -21,6 +23,8 @@ jobs:
       run: yarn install
     - name: Install Fastlane
       run: bundle install
+    - name: Configure build toolchain
+      run: sudo xcode-select --switch /Applications/Xcode_11.3.1.app
     - name: Run tests
       run: bundle exec fastlane ios test
   lint:
