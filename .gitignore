@@ -3,4 +3,5 @@ Lotus/GraphQL/schema.json
 DerivedData
 fastlane/report.xml
 fastlane/test_output
+vendor/bundle
 
