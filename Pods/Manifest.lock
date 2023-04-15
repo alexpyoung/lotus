@@ -14,14 +14,14 @@ PODS:
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - SwiftKeychainWrapper (3.4.0)
-  - SwiftLint (0.39.1)
+  - SwiftLint (0.51.0)
 
 DEPENDENCIES:
   - Apollo (~> 0.23)
   - Apollo/SQLite (~> 0.23)
   - Auth0 (~> 1.22)
   - SwiftKeychainWrapper (~> 3.4)
-  - SwiftLint (~> 0.39)
+  - SwiftLint (~> 0.51)
 
 SPEC REPOS:
   trunk:
@@ -40,8 +40,8 @@ SPEC CHECKSUMS:
   SimpleKeychain: 2c135c65e64cd4e7df7ec418407be83ee07ba1c2
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
-  SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
+  SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
 
-PODFILE CHECKSUM: 1974eb10ccc48fded48f2c13bca9fd0d85e85acb
+PODFILE CHECKSUM: 8da1092fd891614f0eca84022582a28fccfbfdf1
 
 COCOAPODS: 1.9.1
