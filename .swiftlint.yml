@@ -1,6 +1,7 @@
 excluded:
   - Pods
   - Lotus/GraphQL/Operations.swift
+  - vendor/bundle
 
 disabled_rules:
   - trailing_comma

@@ -11,7 +11,7 @@ enum Copy: CustomStringConvertible {
   case existingAccount
   case workouts
   case plans
-  // swiftlint:disable identifier_name
+  // swiftlint:disable:next identifier_name
   case me
   case errorTitle
   case errorSubtitle
