@@ -4,6 +4,10 @@ default_platform(:ios)
 
 platform :ios do
 
+  before_all do
+    ensure_xcode_version
+  end
+
   DERIVED_DATA_PATH = '/tmp/DerivedData'
 
   desc 'Install Cocoapods'

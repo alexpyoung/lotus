@@ -9,7 +9,7 @@ jobs:
         lane:
           - build
           - test
-    runs-on: macos-latest
+    runs-on: macos-12
     steps:
     - uses: actions/checkout@v2
     - uses: ruby/setup-ruby@v1
@@ -18,7 +18,7 @@ jobs:
         bundler-cache: true
     - run: yarn install
     - run: bundle install
-    - run: sudo xcode-select --switch /Applications/Xcode_11.3.1.app
+    - run: sed 's/\.0$//' .xcode-version | xargs -I @ sudo xcode-select --switch /Applications/Xcode_@.app
     - run: bundle exec fastlane ios ${{ matrix.lane }}
   lint:
     runs-on: macos-latest
